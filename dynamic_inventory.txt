@@ -1,0 +1,2523 @@
+ansible-inventory [core 2.13.8]
+  config file = /home/ops63-florentin01/sources/openstack-form5/AgirMinDev99-22Mars/jeanflorentine-agirmin-infra-ansible/ansible.cfg
+  configured module search path = ['/home/ops63-florentin01/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']
+  ansible python module location = /home/ansible/ansible/lib/python3.8/site-packages/ansible
+  ansible collection location = /home/ops63-florentin01/.ansible/collections:/usr/share/ansible/collections
+  executable location = /home/ansible/ansible/bin/ansible-inventory
+  python version = 3.8.10 (default, Nov 14 2022, 12:59:47) [GCC 9.4.0]
+  jinja version = 3.1.2
+  libyaml = True
+Using /home/ops63-florentin01/sources/openstack-form5/AgirMinDev99-22Mars/jeanflorentine-agirmin-infra-ansible/ansible.cfg as config file
+setting up inventory plugins
+host_list declined parsing /home/ops63-florentin01/sources/openstack-form5/AgirMinDev99-22Mars/jeanflorentine-agirmin-infra-ansible/inventories/dev_99/01-localhost.yml as it did not pass its verify_file() method
+script declined parsing /home/ops63-florentin01/sources/openstack-form5/AgirMinDev99-22Mars/jeanflorentine-agirmin-infra-ansible/inventories/dev_99/01-localhost.yml as it did not pass its verify_file() method
+Set default localhost to localhost
+Parsed /home/ops63-florentin01/sources/openstack-form5/AgirMinDev99-22Mars/jeanflorentine-agirmin-infra-ansible/inventories/dev_99/01-localhost.yml inventory source with yaml plugin
+setting up inventory plugins
+host_list declined parsing /home/ops63-florentin01/sources/openstack-form5/AgirMinDev99-22Mars/jeanflorentine-agirmin-infra-ansible/inventories/dev_99/02-openstack.yml as it did not pass its verify_file() method
+script declined parsing /home/ops63-florentin01/sources/openstack-form5/AgirMinDev99-22Mars/jeanflorentine-agirmin-infra-ansible/inventories/dev_99/02-openstack.yml as it did not pass its verify_file() method
+redirecting (type: inventory) ansible.builtin.openstack to openstack.cloud.openstack
+Loading collection openstack.cloud from /home/ops63-florentin01/.ansible/collections/ansible_collections/openstack/cloud
+OpenStack inventory configuration file found: openstack.yml
+Using inventory plugin 'ansible_collections.openstack.cloud.plugins.inventory.openstack' to process inventory source '/home/ops63-florentin01/sources/openstack-form5/AgirMinDev99-22Mars/jeanflorentine-agirmin-infra-ansible/inventories/dev_99/02-openstack.yml'
+Retrieving servers from Openstack clouds
+Found 1 OpenStack cloud(s)
+Using 1 OpenStack cloud(s)
+Parsed /home/ops63-florentin01/sources/openstack-form5/AgirMinDev99-22Mars/jeanflorentine-agirmin-infra-ansible/inventories/dev_99/02-openstack.yml inventory source with auto plugin
+setting up inventory plugins
+host_list declined parsing /home/ops63-florentin01/sources/openstack-form5/AgirMinDev99-22Mars/jeanflorentine-agirmin-infra-ansible/inventories/dev_99/03-platform.yml as it did not pass its verify_file() method
+script declined parsing /home/ops63-florentin01/sources/openstack-form5/AgirMinDev99-22Mars/jeanflorentine-agirmin-infra-ansible/inventories/dev_99/03-platform.yml as it did not pass its verify_file() method
+Using inventory plugin 'constructed' to process inventory source '/home/ops63-florentin01/sources/openstack-form5/AgirMinDev99-22Mars/jeanflorentine-agirmin-infra-ansible/inventories/dev_99/03-platform.yml'
+Parsed /home/ops63-florentin01/sources/openstack-form5/AgirMinDev99-22Mars/jeanflorentine-agirmin-infra-ansible/inventories/dev_99/03-platform.yml inventory source with auto plugin
+{
+    "AZ1": {
+        "hosts": [
+            "ami-01-vm-collecte_0199-dev",
+            "ami-01-vm-echanges_0199-dev",
+            "ami-01-vm-mapi_0199-dev"
+        ]
+    },
+    "AZ2": {
+        "hosts": [
+            "ami-01-vm-bastion_0199-dev",
+            "ami-01-vm-bdd_0199-dev",
+            "ami-01-vm-clamav_0199-dev",
+            "ami-01-vm-itm_0199-dev"
+        ]
+    },
+    "RegionOne": {
+        "hosts": [
+            "ami-01-vm-bastion_0199-dev",
+            "ami-01-vm-bdd_0199-dev",
+            "ami-01-vm-clamav_0199-dev",
+            "ami-01-vm-collecte_0199-dev",
+            "ami-01-vm-echanges_0199-dev",
+            "ami-01-vm-itm_0199-dev",
+            "ami-01-vm-mapi_0199-dev"
+        ]
+    },
+    "RegionOne_AZ1": {
+        "hosts": [
+            "ami-01-vm-collecte_0199-dev",
+            "ami-01-vm-echanges_0199-dev",
+            "ami-01-vm-mapi_0199-dev"
+        ]
+    },
+    "RegionOne_AZ2": {
+        "hosts": [
+            "ami-01-vm-bastion_0199-dev",
+            "ami-01-vm-bdd_0199-dev",
+            "ami-01-vm-clamav_0199-dev",
+            "ami-01-vm-itm_0199-dev"
+        ]
+    },
+    "_meta": {
+        "hostvars": {
+            "ami-01-vm-bastion_0199-dev": {
+                "adm_net_cidr": "172.18.0.0/24",
+                "admin_network_name": "ami-01-network-admin_0199-dev",
+                "ami_db_name": "amidb",
+                "ami_local_repo": "/var/tmp/repo_ami",
+                "ami_rpm_dir": "6.0.1-SNAPSHOT",
+                "ami_rpm_type": "snapshots",
+                "ami_rpm_version": "6.0.1-20210928.125027-1",
+                "ansible_host": "10.125.8.220",
+                "ansible_python_interpreter": "/usr/bin/python",
+                "ansible_ssh_host": "10.125.8.220",
+                "ansible_user": "{{ linux_user }}",
+                "authorized_keys": [],
+                "beneficiaire": "DGFIP",
+                "cloud_name": "{{ deploy.cloud_name }}",
+                "collecte_name": "ami-01-vm-collecte_0199-dev",
+                "data_net_cidr": "192.168.0.0/24",
+                "data_network_name": "ami-01-network-data_0199-dev",
+                "deploy": {
+                    "cloud_name": "formation5",
+                    "platform_name": "formation5"
+                },
+                "host_bastion01": "ami-01-vm-bastion_0199-dev",
+                "host_bdd01": "ami-01-vm-bdd_0199-dev",
+                "host_clamav01": "ami-01-vm-clamav_0199-dev",
+                "host_collecte01": "ami-01-vm-collecte_0199-dev",
+                "host_echanges01": "ami-01-vm-echanges_0199-dev",
+                "host_itm01": "ami-01-vm-itm_0199-dev",
+                "host_mapi01": "ami-01-vm-mapi_0199-dev",
+                "install_rpm_suffix": "-install-dev-99",
+                "int_net_cidr": "172.16.0.0/24",
+                "internal_network_name": "ami-01-network-publi_0199-dev",
+                "ip_annuaire": "127.0.0.99",
+                "linux_groups": [
+                    {
+                        "gid": 1500,
+                        "name": "appgroup"
+                    }
+                ],
+                "linux_user": "cloudadm",
+                "linux_users": [
+                    {
+                        "comment": "demo appuser",
+                        "group": "appgroup",
+                        "groups": [],
+                        "home": "/home/appuser",
+                        "name": "appuser",
+                        "shell": "/bin/bash",
+                        "uid": 1500
+                    }
+                ],
+                "loki_url": "http://ami-01-vm-collecte_0199-dev-int:3100",
+                "mapi_hostname_int": "ami-01-vm-mapi_0199-dev-int",
+                "ne_labels_group": "couloir99",
+                "nexus_outillage_url": "http://nexus.picamidev.dgfip",
+                "nfs_server_name": "ami-01-vm-echanges_0199-dev-int",
+                "nom_annuaire": "annuaire-test-apor",
+                "ntp_server_nubo": "10.125.4.1",
+                "nuage_url": "nuage01",
+                "nubo": "NUBP01",
+                "openstack": {
+                    "access_ipv4": "",
+                    "access_ipv6": "",
+                    "addresses": {
+                        "ami-01-network-admin_0199-dev": [
+                            {
+                                "OS-EXT-IPS-MAC:mac_addr": "fa:16:3e:da:ed:ec",
+                                "OS-EXT-IPS:type": "fixed",
+                                "addr": "172.18.0.104",
+                                "version": 4
+                            },
+                            {
+                                "OS-EXT-IPS-MAC:mac_addr": "fa:16:3e:da:ed:ec",
+                                "OS-EXT-IPS:type": "floating",
+                                "addr": "10.125.8.220",
+                                "version": 4
+                            }
+                        ]
+                    },
+                    "admin_password": null,
+                    "attached_volumes": [],
+                    "availability_zone": "AZ2",
+                    "block_device_mapping": null,
+                    "cloud": {
+                        "name": "formation5",
+                        "region": "RegionOne"
+                    },
+                    "compute_host": null,
+                    "config_drive": "",
+                    "created_at": "2023-03-30T11:55:16Z",
+                    "description": "ami-01-vm-bastion_0199-dev",
+                    "disk_config": "MANUAL",
+                    "fault": null,
+                    "flavor": {
+                        "description": null,
+                        "disk": 10,
+                        "ephemeral": 0,
+                        "extra_specs": {
+                            "production": "true"
+                        },
+                        "id": "CO1.1",
+                        "is_disabled": null,
+                        "is_public": true,
+                        "location": null,
+                        "name": "CO1.1",
+                        "original_name": "CO1.1",
+                        "ram": 2048,
+                        "rxtx_factor": null,
+                        "swap": 0,
+                        "vcpus": 1
+                    },
+                    "flavor_id": null,
+                    "has_config_drive": "",
+                    "host_id": "953e7416bbb8bcbe7587a86736f346fe0ecfec27eb846ebd020c0455",
+                    "host_status": null,
+                    "hostname": null,
+                    "hypervisor_hostname": null,
+                    "id": "20730b37-1708-41d4-80b4-29a053ce9cfa",
+                    "image": {
+                        "architecture": null,
+                        "checksum": null,
+                        "container_format": null,
+                        "created_at": null,
+                        "direct_url": null,
+                        "disk_format": null,
+                        "file": null,
+                        "has_auto_disk_config": null,
+                        "hash_algo": null,
+                        "hash_value": null,
+                        "hw_cpu_cores": null,
+                        "hw_cpu_policy": null,
+                        "hw_cpu_sockets": null,
+                        "hw_cpu_thread_policy": null,
+                        "hw_cpu_threads": null,
+                        "hw_disk_bus": null,
+                        "hw_machine_type": null,
+                        "hw_qemu_guest_agent": null,
+                        "hw_rng_model": null,
+                        "hw_scsi_model": null,
+                        "hw_serial_port_count": null,
+                        "hw_video_model": null,
+                        "hw_video_ram": null,
+                        "hw_vif_model": null,
+                        "hw_watchdog_action": null,
+                        "hypervisor_type": null,
+                        "id": "ccbd2e29-5baf-4d36-967c-41d8b3ad353d",
+                        "instance_type_rxtx_factor": null,
+                        "instance_uuid": null,
+                        "is_hidden": null,
+                        "is_hw_boot_menu_enabled": null,
+                        "is_hw_vif_multiqueue_enabled": null,
+                        "is_protected": null,
+                        "kernel_id": null,
+                        "location": null,
+                        "locations": null,
+                        "metadata": null,
+                        "min_disk": null,
+                        "min_ram": null,
+                        "name": null,
+                        "needs_config_drive": null,
+                        "needs_secure_boot": null,
+                        "os_admin_user": null,
+                        "os_command_line": null,
+                        "os_distro": null,
+                        "os_require_quiesce": null,
+                        "os_shutdown_timeout": null,
+                        "os_type": null,
+                        "os_version": null,
+                        "owner": null,
+                        "owner_id": null,
+                        "properties": {
+                            "links": [
+                                {
+                                    "href": "https://nuage01.dgfip.finances.rie.gouv.fr:8774/images/ccbd2e29-5baf-4d36-967c-41d8b3ad353d",
+                                    "rel": "bookmark"
+                                }
+                            ]
+                        },
+                        "ramdisk_id": null,
+                        "schema": null,
+                        "size": null,
+                        "status": null,
+                        "store": null,
+                        "tags": [],
+                        "updated_at": null,
+                        "url": null,
+                        "virtual_size": null,
+                        "visibility": null,
+                        "vm_mode": null,
+                        "vmware_adaptertype": null,
+                        "vmware_ostype": null
+                    },
+                    "image_id": null,
+                    "instance_name": null,
+                    "is_locked": false,
+                    "kernel_id": null,
+                    "key_name": "keypair_formation5",
+                    "launch_index": null,
+                    "launched_at": "2023-03-30T11:55:34.000000",
+                    "links": [
+                        {
+                            "href": "https://nuage01.dgfip.finances.rie.gouv.fr:8774/v2.1/servers/20730b37-1708-41d4-80b4-29a053ce9cfa",
+                            "rel": "self"
+                        },
+                        {
+                            "href": "https://nuage01.dgfip.finances.rie.gouv.fr:8774/servers/20730b37-1708-41d4-80b4-29a053ce9cfa",
+                            "rel": "bookmark"
+                        }
+                    ],
+                    "max_count": null,
+                    "metadata": {
+                        "group": "bastion",
+                        "platform_name": "ami_formation5"
+                    },
+                    "min_count": null,
+                    "name": "ami-01-vm-bastion_0199-dev",
+                    "networks": null,
+                    "power_state": 1,
+                    "progress": 0,
+                    "project_id": "0a6625bef95a45da8dd01b9ead14d010",
+                    "ramdisk_id": null,
+                    "reservation_id": null,
+                    "root_device_name": null,
+                    "scheduler_hints": null,
+                    "security_groups": [
+                        {
+                            "name": "ami-01-sg-bastion_0199-dev"
+                        }
+                    ],
+                    "server_groups": null,
+                    "status": "ACTIVE",
+                    "tags": [],
+                    "task_state": null,
+                    "terminated_at": null,
+                    "trusted_image_certificates": null,
+                    "updated_at": "2023-03-30T11:55:34Z",
+                    "user_data": null,
+                    "user_id": "aa0c5bad658146c0ade1b21ebd9065c1",
+                    "vm_state": "active",
+                    "volumes": []
+                },
+                "ordonnancement_key_name": "id_rsa_ordonnancement.pub",
+                "os_environment": {
+                    "OS_CLOUD": "{{ deploy.cloud_name }}"
+                },
+                "os_password": "Agirmin_20211020",
+                "os_project_name": "DGFIP-SI1BAGIRMIN-Agirmin_dev",
+                "os_username": "DGFIP-SI1BAGIRMIN-Agirmin_dev-compte_technique",
+                "platform_name": "{{ deploy.platform_name }}",
+                "proxy_addr": "{{ proxy_ip }}:{{ proxy_port }}",
+                "proxy_ip": "10.154.68.7",
+                "proxy_port": "8080",
+                "relais_messagerie": "relaistest-agents-remise.appli.dgfip",
+                "server_name_loki": "loki-ami-01-vm-collecte_0199-dev",
+                "server_name_prometheus": "prometheus-ami-01-vm-collecte_0199-dev",
+                "statique_hosts_axis": " ",
+                "stf_conf_file1": "2IA_AGIRMIN_MEN_IIAAGIRMINMEN_IIA.conf",
+                "stf_conf_file2": "IIAAGIRMINMEN_2IA_AGIRMIN_MEN_IIA.conf",
+                "stf_conf_phase": "IIA",
+                "stf_key_name": "id_rsa_stf.pub.IIA",
+                "tomcat_version_rpm": "tomcat-9.0.12-1.1.DGFiP.noarch.rpm"
+            },
+            "ami-01-vm-bdd_0199-dev": {
+                "adm_net_cidr": "172.18.0.0/24",
+                "admin_network_name": "ami-01-network-admin_0199-dev",
+                "ami_db_name": "amidb",
+                "ami_local_repo": "/var/tmp/repo_ami",
+                "ami_rpm_dir": "6.0.1-SNAPSHOT",
+                "ami_rpm_type": "snapshots",
+                "ami_rpm_version": "6.0.1-20210928.125027-1",
+                "ansible_host": "172.18.0.106",
+                "ansible_python_interpreter": "/usr/bin/python",
+                "ansible_ssh_host": "172.18.0.106",
+                "ansible_user": "{{ linux_user }}",
+                "authorized_keys": [],
+                "beneficiaire": "DGFIP",
+                "cloud_name": "{{ deploy.cloud_name }}",
+                "collecte_name": "ami-01-vm-collecte_0199-dev",
+                "data_net_cidr": "192.168.0.0/24",
+                "data_network_name": "ami-01-network-data_0199-dev",
+                "deploy": {
+                    "cloud_name": "formation5",
+                    "platform_name": "formation5"
+                },
+                "host_bastion01": "ami-01-vm-bastion_0199-dev",
+                "host_bdd01": "ami-01-vm-bdd_0199-dev",
+                "host_clamav01": "ami-01-vm-clamav_0199-dev",
+                "host_collecte01": "ami-01-vm-collecte_0199-dev",
+                "host_echanges01": "ami-01-vm-echanges_0199-dev",
+                "host_itm01": "ami-01-vm-itm_0199-dev",
+                "host_mapi01": "ami-01-vm-mapi_0199-dev",
+                "install_rpm_suffix": "-install-dev-99",
+                "int_net_cidr": "172.16.0.0/24",
+                "internal_network_name": "ami-01-network-publi_0199-dev",
+                "ip_annuaire": "127.0.0.99",
+                "linux_groups": [
+                    {
+                        "gid": 1500,
+                        "name": "appgroup"
+                    }
+                ],
+                "linux_user": "cloudadm",
+                "linux_users": [
+                    {
+                        "comment": "demo appuser",
+                        "group": "appgroup",
+                        "groups": [],
+                        "home": "/home/appuser",
+                        "name": "appuser",
+                        "shell": "/bin/bash",
+                        "uid": 1500
+                    }
+                ],
+                "loki_url": "http://ami-01-vm-collecte_0199-dev-int:3100",
+                "mapi_hostname_int": "ami-01-vm-mapi_0199-dev-int",
+                "ne_labels_group": "couloir99",
+                "nexus_outillage_url": "http://nexus.picamidev.dgfip",
+                "nfs_server_name": "ami-01-vm-echanges_0199-dev-int",
+                "nom_annuaire": "annuaire-test-apor",
+                "ntp_server_nubo": "10.125.4.1",
+                "nuage_url": "nuage01",
+                "nubo": "NUBP01",
+                "openstack": {
+                    "access_ipv4": "",
+                    "access_ipv6": "",
+                    "addresses": {
+                        "ami-01-network-admin_0199-dev": [
+                            {
+                                "OS-EXT-IPS-MAC:mac_addr": "fa:16:3e:cc:78:b0",
+                                "OS-EXT-IPS:type": "fixed",
+                                "addr": "172.18.0.106",
+                                "version": 4
+                            }
+                        ],
+                        "ami-01-network-data_0199-dev": [
+                            {
+                                "OS-EXT-IPS-MAC:mac_addr": "fa:16:3e:41:06:64",
+                                "OS-EXT-IPS:type": "fixed",
+                                "addr": "192.168.0.55",
+                                "version": 4
+                            }
+                        ],
+                        "ami-01-network-publi_0199-dev": [
+                            {
+                                "OS-EXT-IPS-MAC:mac_addr": "fa:16:3e:d0:f3:9f",
+                                "OS-EXT-IPS:type": "fixed",
+                                "addr": "172.16.0.164",
+                                "version": 4
+                            }
+                        ]
+                    },
+                    "admin_password": null,
+                    "attached_volumes": [
+                        {
+                            "attachment_id": null,
+                            "bdm_id": null,
+                            "delete_on_termination": false,
+                            "device": null,
+                            "id": "1fddfa9e-193d-461b-86d4-7f6c0da50475",
+                            "location": null,
+                            "name": null,
+                            "tag": null,
+                            "volume_id": null
+                        }
+                    ],
+                    "availability_zone": "AZ2",
+                    "block_device_mapping": null,
+                    "cloud": {
+                        "name": "formation5",
+                        "region": "RegionOne"
+                    },
+                    "compute_host": null,
+                    "config_drive": "",
+                    "created_at": "2023-03-30T11:55:17Z",
+                    "description": "ami-01-vm-bdd_0199-dev",
+                    "disk_config": "MANUAL",
+                    "fault": null,
+                    "flavor": {
+                        "description": null,
+                        "disk": 10,
+                        "ephemeral": 0,
+                        "extra_specs": {
+                            "production": "true"
+                        },
+                        "id": "CO1.4",
+                        "is_disabled": null,
+                        "is_public": true,
+                        "location": null,
+                        "name": "CO1.4",
+                        "original_name": "CO1.4",
+                        "ram": 8192,
+                        "rxtx_factor": null,
+                        "swap": 0,
+                        "vcpus": 4
+                    },
+                    "flavor_id": null,
+                    "has_config_drive": "",
+                    "host_id": "c465930018869bbb46615baf6311d104c71348da7e2d9d3fe2c8b6eb",
+                    "host_status": null,
+                    "hostname": null,
+                    "hypervisor_hostname": null,
+                    "id": "4df80cdd-3d02-409e-b0a5-455aa0759874",
+                    "image": {
+                        "architecture": null,
+                        "checksum": null,
+                        "container_format": null,
+                        "created_at": null,
+                        "direct_url": null,
+                        "disk_format": null,
+                        "file": null,
+                        "has_auto_disk_config": null,
+                        "hash_algo": null,
+                        "hash_value": null,
+                        "hw_cpu_cores": null,
+                        "hw_cpu_policy": null,
+                        "hw_cpu_sockets": null,
+                        "hw_cpu_thread_policy": null,
+                        "hw_cpu_threads": null,
+                        "hw_disk_bus": null,
+                        "hw_machine_type": null,
+                        "hw_qemu_guest_agent": null,
+                        "hw_rng_model": null,
+                        "hw_scsi_model": null,
+                        "hw_serial_port_count": null,
+                        "hw_video_model": null,
+                        "hw_video_ram": null,
+                        "hw_vif_model": null,
+                        "hw_watchdog_action": null,
+                        "hypervisor_type": null,
+                        "id": "ccbd2e29-5baf-4d36-967c-41d8b3ad353d",
+                        "instance_type_rxtx_factor": null,
+                        "instance_uuid": null,
+                        "is_hidden": null,
+                        "is_hw_boot_menu_enabled": null,
+                        "is_hw_vif_multiqueue_enabled": null,
+                        "is_protected": null,
+                        "kernel_id": null,
+                        "location": null,
+                        "locations": null,
+                        "metadata": null,
+                        "min_disk": null,
+                        "min_ram": null,
+                        "name": null,
+                        "needs_config_drive": null,
+                        "needs_secure_boot": null,
+                        "os_admin_user": null,
+                        "os_command_line": null,
+                        "os_distro": null,
+                        "os_require_quiesce": null,
+                        "os_shutdown_timeout": null,
+                        "os_type": null,
+                        "os_version": null,
+                        "owner": null,
+                        "owner_id": null,
+                        "properties": {
+                            "links": [
+                                {
+                                    "href": "https://nuage01.dgfip.finances.rie.gouv.fr:8774/images/ccbd2e29-5baf-4d36-967c-41d8b3ad353d",
+                                    "rel": "bookmark"
+                                }
+                            ]
+                        },
+                        "ramdisk_id": null,
+                        "schema": null,
+                        "size": null,
+                        "status": null,
+                        "store": null,
+                        "tags": [],
+                        "updated_at": null,
+                        "url": null,
+                        "virtual_size": null,
+                        "visibility": null,
+                        "vm_mode": null,
+                        "vmware_adaptertype": null,
+                        "vmware_ostype": null
+                    },
+                    "image_id": null,
+                    "instance_name": null,
+                    "is_locked": false,
+                    "kernel_id": null,
+                    "key_name": "keypair_formation5",
+                    "launch_index": null,
+                    "launched_at": "2023-03-30T11:56:09.000000",
+                    "links": [
+                        {
+                            "href": "https://nuage01.dgfip.finances.rie.gouv.fr:8774/v2.1/servers/4df80cdd-3d02-409e-b0a5-455aa0759874",
+                            "rel": "self"
+                        },
+                        {
+                            "href": "https://nuage01.dgfip.finances.rie.gouv.fr:8774/servers/4df80cdd-3d02-409e-b0a5-455aa0759874",
+                            "rel": "bookmark"
+                        }
+                    ],
+                    "max_count": null,
+                    "metadata": {
+                        "group": "bdd",
+                        "platform_name": "ami_formation5"
+                    },
+                    "min_count": null,
+                    "name": "ami-01-vm-bdd_0199-dev",
+                    "networks": null,
+                    "power_state": 1,
+                    "progress": 0,
+                    "project_id": "0a6625bef95a45da8dd01b9ead14d010",
+                    "ramdisk_id": null,
+                    "reservation_id": null,
+                    "root_device_name": null,
+                    "scheduler_hints": null,
+                    "security_groups": [
+                        {
+                            "name": "ami-01-sg-ssh_planprod_0199-dev"
+                        },
+                        {
+                            "name": "ami-01-sg-ssh_0199-dev"
+                        },
+                        {
+                            "name": "ami-01-sg-monitoring_0199-dev"
+                        },
+                        {
+                            "name": "ami-01-sg-data_0199-dev"
+                        }
+                    ],
+                    "server_groups": null,
+                    "status": "ACTIVE",
+                    "tags": [],
+                    "task_state": null,
+                    "terminated_at": null,
+                    "trusted_image_certificates": null,
+                    "updated_at": "2023-03-30T11:56:10Z",
+                    "user_data": null,
+                    "user_id": "aa0c5bad658146c0ade1b21ebd9065c1",
+                    "vm_state": "active",
+                    "volumes": [
+                        {
+                            "attachment_id": null,
+                            "bdm_id": null,
+                            "delete_on_termination": false,
+                            "device": null,
+                            "id": "1fddfa9e-193d-461b-86d4-7f6c0da50475",
+                            "location": null,
+                            "name": null,
+                            "tag": null,
+                            "volume_id": null
+                        }
+                    ]
+                },
+                "ordonnancement_key_name": "id_rsa_ordonnancement.pub",
+                "os_environment": {
+                    "OS_CLOUD": "{{ deploy.cloud_name }}"
+                },
+                "os_password": "Agirmin_20211020",
+                "os_project_name": "DGFIP-SI1BAGIRMIN-Agirmin_dev",
+                "os_username": "DGFIP-SI1BAGIRMIN-Agirmin_dev-compte_technique",
+                "platform_name": "{{ deploy.platform_name }}",
+                "proxy_addr": "{{ proxy_ip }}:{{ proxy_port }}",
+                "proxy_ip": "10.154.68.7",
+                "proxy_port": "8080",
+                "relais_messagerie": "relaistest-agents-remise.appli.dgfip",
+                "server_name_loki": "loki-ami-01-vm-collecte_0199-dev",
+                "server_name_prometheus": "prometheus-ami-01-vm-collecte_0199-dev",
+                "statique_hosts_axis": " ",
+                "stf_conf_file1": "2IA_AGIRMIN_MEN_IIAAGIRMINMEN_IIA.conf",
+                "stf_conf_file2": "IIAAGIRMINMEN_2IA_AGIRMIN_MEN_IIA.conf",
+                "stf_conf_phase": "IIA",
+                "stf_key_name": "id_rsa_stf.pub.IIA",
+                "tomcat_version_rpm": "tomcat-9.0.12-1.1.DGFiP.noarch.rpm"
+            },
+            "ami-01-vm-clamav_0199-dev": {
+                "adm_net_cidr": "172.18.0.0/24",
+                "admin_network_name": "ami-01-network-admin_0199-dev",
+                "ami_db_name": "amidb",
+                "ami_local_repo": "/var/tmp/repo_ami",
+                "ami_rpm_dir": "6.0.1-SNAPSHOT",
+                "ami_rpm_type": "snapshots",
+                "ami_rpm_version": "6.0.1-20210928.125027-1",
+                "ansible_host": "172.18.0.72",
+                "ansible_python_interpreter": "/usr/bin/python",
+                "ansible_ssh_host": "172.18.0.72",
+                "ansible_user": "{{ linux_user }}",
+                "authorized_keys": [],
+                "beneficiaire": "DGFIP",
+                "cloud_name": "{{ deploy.cloud_name }}",
+                "collecte_name": "ami-01-vm-collecte_0199-dev",
+                "data_net_cidr": "192.168.0.0/24",
+                "data_network_name": "ami-01-network-data_0199-dev",
+                "deploy": {
+                    "cloud_name": "formation5",
+                    "platform_name": "formation5"
+                },
+                "host_bastion01": "ami-01-vm-bastion_0199-dev",
+                "host_bdd01": "ami-01-vm-bdd_0199-dev",
+                "host_clamav01": "ami-01-vm-clamav_0199-dev",
+                "host_collecte01": "ami-01-vm-collecte_0199-dev",
+                "host_echanges01": "ami-01-vm-echanges_0199-dev",
+                "host_itm01": "ami-01-vm-itm_0199-dev",
+                "host_mapi01": "ami-01-vm-mapi_0199-dev",
+                "install_rpm_suffix": "-install-dev-99",
+                "int_net_cidr": "172.16.0.0/24",
+                "internal_network_name": "ami-01-network-publi_0199-dev",
+                "ip_annuaire": "127.0.0.99",
+                "linux_groups": [
+                    {
+                        "gid": 1500,
+                        "name": "appgroup"
+                    }
+                ],
+                "linux_user": "cloudadm",
+                "linux_users": [
+                    {
+                        "comment": "demo appuser",
+                        "group": "appgroup",
+                        "groups": [],
+                        "home": "/home/appuser",
+                        "name": "appuser",
+                        "shell": "/bin/bash",
+                        "uid": 1500
+                    }
+                ],
+                "loki_url": "http://ami-01-vm-collecte_0199-dev-int:3100",
+                "mapi_hostname_int": "ami-01-vm-mapi_0199-dev-int",
+                "ne_labels_group": "couloir99",
+                "nexus_outillage_url": "http://nexus.picamidev.dgfip",
+                "nfs_server_name": "ami-01-vm-echanges_0199-dev-int",
+                "nom_annuaire": "annuaire-test-apor",
+                "ntp_server_nubo": "10.125.4.1",
+                "nuage_url": "nuage01",
+                "nubo": "NUBP01",
+                "openstack": {
+                    "access_ipv4": "",
+                    "access_ipv6": "",
+                    "addresses": {
+                        "ami-01-network-admin_0199-dev": [
+                            {
+                                "OS-EXT-IPS-MAC:mac_addr": "fa:16:3e:99:84:0d",
+                                "OS-EXT-IPS:type": "fixed",
+                                "addr": "172.18.0.72",
+                                "version": 4
+                            }
+                        ],
+                        "ami-01-network-publi_0199-dev": [
+                            {
+                                "OS-EXT-IPS-MAC:mac_addr": "fa:16:3e:f0:dd:5f",
+                                "OS-EXT-IPS:type": "fixed",
+                                "addr": "172.16.0.84",
+                                "version": 4
+                            }
+                        ]
+                    },
+                    "admin_password": null,
+                    "attached_volumes": [],
+                    "availability_zone": "AZ2",
+                    "block_device_mapping": null,
+                    "cloud": {
+                        "name": "formation5",
+                        "region": "RegionOne"
+                    },
+                    "compute_host": null,
+                    "config_drive": "",
+                    "created_at": "2023-03-30T11:55:16Z",
+                    "description": "ami-01-vm-clamav_0199-dev",
+                    "disk_config": "MANUAL",
+                    "fault": null,
+                    "flavor": {
+                        "description": null,
+                        "disk": 10,
+                        "ephemeral": 0,
+                        "extra_specs": {
+                            "production": "true"
+                        },
+                        "id": "CO1.2",
+                        "is_disabled": null,
+                        "is_public": true,
+                        "location": null,
+                        "name": "CO1.2",
+                        "original_name": "CO1.2",
+                        "ram": 4096,
+                        "rxtx_factor": null,
+                        "swap": 0,
+                        "vcpus": 2
+                    },
+                    "flavor_id": null,
+                    "has_config_drive": "",
+                    "host_id": "953e7416bbb8bcbe7587a86736f346fe0ecfec27eb846ebd020c0455",
+                    "host_status": null,
+                    "hostname": null,
+                    "hypervisor_hostname": null,
+                    "id": "c1c5d240-c251-4c89-a307-e4dc1f10e850",
+                    "image": {
+                        "architecture": null,
+                        "checksum": null,
+                        "container_format": null,
+                        "created_at": null,
+                        "direct_url": null,
+                        "disk_format": null,
+                        "file": null,
+                        "has_auto_disk_config": null,
+                        "hash_algo": null,
+                        "hash_value": null,
+                        "hw_cpu_cores": null,
+                        "hw_cpu_policy": null,
+                        "hw_cpu_sockets": null,
+                        "hw_cpu_thread_policy": null,
+                        "hw_cpu_threads": null,
+                        "hw_disk_bus": null,
+                        "hw_machine_type": null,
+                        "hw_qemu_guest_agent": null,
+                        "hw_rng_model": null,
+                        "hw_scsi_model": null,
+                        "hw_serial_port_count": null,
+                        "hw_video_model": null,
+                        "hw_video_ram": null,
+                        "hw_vif_model": null,
+                        "hw_watchdog_action": null,
+                        "hypervisor_type": null,
+                        "id": "ccbd2e29-5baf-4d36-967c-41d8b3ad353d",
+                        "instance_type_rxtx_factor": null,
+                        "instance_uuid": null,
+                        "is_hidden": null,
+                        "is_hw_boot_menu_enabled": null,
+                        "is_hw_vif_multiqueue_enabled": null,
+                        "is_protected": null,
+                        "kernel_id": null,
+                        "location": null,
+                        "locations": null,
+                        "metadata": null,
+                        "min_disk": null,
+                        "min_ram": null,
+                        "name": null,
+                        "needs_config_drive": null,
+                        "needs_secure_boot": null,
+                        "os_admin_user": null,
+                        "os_command_line": null,
+                        "os_distro": null,
+                        "os_require_quiesce": null,
+                        "os_shutdown_timeout": null,
+                        "os_type": null,
+                        "os_version": null,
+                        "owner": null,
+                        "owner_id": null,
+                        "properties": {
+                            "links": [
+                                {
+                                    "href": "https://nuage01.dgfip.finances.rie.gouv.fr:8774/images/ccbd2e29-5baf-4d36-967c-41d8b3ad353d",
+                                    "rel": "bookmark"
+                                }
+                            ]
+                        },
+                        "ramdisk_id": null,
+                        "schema": null,
+                        "size": null,
+                        "status": null,
+                        "store": null,
+                        "tags": [],
+                        "updated_at": null,
+                        "url": null,
+                        "virtual_size": null,
+                        "visibility": null,
+                        "vm_mode": null,
+                        "vmware_adaptertype": null,
+                        "vmware_ostype": null
+                    },
+                    "image_id": null,
+                    "instance_name": null,
+                    "is_locked": false,
+                    "kernel_id": null,
+                    "key_name": "keypair_formation5",
+                    "launch_index": null,
+                    "launched_at": "2023-03-30T11:55:48.000000",
+                    "links": [
+                        {
+                            "href": "https://nuage01.dgfip.finances.rie.gouv.fr:8774/v2.1/servers/c1c5d240-c251-4c89-a307-e4dc1f10e850",
+                            "rel": "self"
+                        },
+                        {
+                            "href": "https://nuage01.dgfip.finances.rie.gouv.fr:8774/servers/c1c5d240-c251-4c89-a307-e4dc1f10e850",
+                            "rel": "bookmark"
+                        }
+                    ],
+                    "max_count": null,
+                    "metadata": {
+                        "flux_clamav_01": "Flux vers proxy-antivirus 10.154.68.19:8080",
+                        "group": "clamav",
+                        "platform_name": "ami_formation5"
+                    },
+                    "min_count": null,
+                    "name": "ami-01-vm-clamav_0199-dev",
+                    "networks": null,
+                    "power_state": 1,
+                    "progress": 0,
+                    "project_id": "0a6625bef95a45da8dd01b9ead14d010",
+                    "ramdisk_id": null,
+                    "reservation_id": null,
+                    "root_device_name": null,
+                    "scheduler_hints": null,
+                    "security_groups": [
+                        {
+                            "name": "ami-01-sg-ssh_0199-dev"
+                        },
+                        {
+                            "name": "ami-01-sg-monitoring_0199-dev"
+                        },
+                        {
+                            "name": "ami-01-sg-clamav_0199-dev"
+                        }
+                    ],
+                    "server_groups": null,
+                    "status": "ACTIVE",
+                    "tags": [],
+                    "task_state": null,
+                    "terminated_at": null,
+                    "trusted_image_certificates": null,
+                    "updated_at": "2023-03-30T11:55:49Z",
+                    "user_data": null,
+                    "user_id": "aa0c5bad658146c0ade1b21ebd9065c1",
+                    "vm_state": "active",
+                    "volumes": []
+                },
+                "ordonnancement_key_name": "id_rsa_ordonnancement.pub",
+                "os_environment": {
+                    "OS_CLOUD": "{{ deploy.cloud_name }}"
+                },
+                "os_password": "Agirmin_20211020",
+                "os_project_name": "DGFIP-SI1BAGIRMIN-Agirmin_dev",
+                "os_username": "DGFIP-SI1BAGIRMIN-Agirmin_dev-compte_technique",
+                "platform_name": "{{ deploy.platform_name }}",
+                "proxy_addr": "{{ proxy_ip }}:{{ proxy_port }}",
+                "proxy_ip": "10.154.68.7",
+                "proxy_port": "8080",
+                "relais_messagerie": "relaistest-agents-remise.appli.dgfip",
+                "server_name_loki": "loki-ami-01-vm-collecte_0199-dev",
+                "server_name_prometheus": "prometheus-ami-01-vm-collecte_0199-dev",
+                "statique_hosts_axis": " ",
+                "stf_conf_file1": "2IA_AGIRMIN_MEN_IIAAGIRMINMEN_IIA.conf",
+                "stf_conf_file2": "IIAAGIRMINMEN_2IA_AGIRMIN_MEN_IIA.conf",
+                "stf_conf_phase": "IIA",
+                "stf_key_name": "id_rsa_stf.pub.IIA",
+                "tomcat_version_rpm": "tomcat-9.0.12-1.1.DGFiP.noarch.rpm"
+            },
+            "ami-01-vm-collecte_0199-dev": {
+                "adm_net_cidr": "172.18.0.0/24",
+                "admin_network_name": "ami-01-network-admin_0199-dev",
+                "ami_db_name": "amidb",
+                "ami_local_repo": "/var/tmp/repo_ami",
+                "ami_rpm_dir": "6.0.1-SNAPSHOT",
+                "ami_rpm_type": "snapshots",
+                "ami_rpm_version": "6.0.1-20210928.125027-1",
+                "ansible_host": "10.125.10.191",
+                "ansible_python_interpreter": "/usr/bin/python",
+                "ansible_ssh_host": "10.125.10.191",
+                "ansible_user": "{{ linux_user }}",
+                "authorized_keys": [],
+                "beneficiaire": "DGFIP",
+                "cloud_name": "{{ deploy.cloud_name }}",
+                "collecte_name": "ami-01-vm-collecte_0199-dev",
+                "data_net_cidr": "192.168.0.0/24",
+                "data_network_name": "ami-01-network-data_0199-dev",
+                "deploy": {
+                    "cloud_name": "formation5",
+                    "platform_name": "formation5"
+                },
+                "host_bastion01": "ami-01-vm-bastion_0199-dev",
+                "host_bdd01": "ami-01-vm-bdd_0199-dev",
+                "host_clamav01": "ami-01-vm-clamav_0199-dev",
+                "host_collecte01": "ami-01-vm-collecte_0199-dev",
+                "host_echanges01": "ami-01-vm-echanges_0199-dev",
+                "host_itm01": "ami-01-vm-itm_0199-dev",
+                "host_mapi01": "ami-01-vm-mapi_0199-dev",
+                "install_rpm_suffix": "-install-dev-99",
+                "int_net_cidr": "172.16.0.0/24",
+                "internal_network_name": "ami-01-network-publi_0199-dev",
+                "ip_annuaire": "127.0.0.99",
+                "linux_groups": [
+                    {
+                        "gid": 1500,
+                        "name": "appgroup"
+                    }
+                ],
+                "linux_user": "cloudadm",
+                "linux_users": [
+                    {
+                        "comment": "demo appuser",
+                        "group": "appgroup",
+                        "groups": [],
+                        "home": "/home/appuser",
+                        "name": "appuser",
+                        "shell": "/bin/bash",
+                        "uid": 1500
+                    }
+                ],
+                "loki_url": "http://ami-01-vm-collecte_0199-dev-int:3100",
+                "mapi_hostname_int": "ami-01-vm-mapi_0199-dev-int",
+                "ne_labels_group": "couloir99",
+                "nexus_outillage_url": "http://nexus.picamidev.dgfip",
+                "nfs_server_name": "ami-01-vm-echanges_0199-dev-int",
+                "nom_annuaire": "annuaire-test-apor",
+                "ntp_server_nubo": "10.125.4.1",
+                "nuage_url": "nuage01",
+                "nubo": "NUBP01",
+                "openstack": {
+                    "access_ipv4": "",
+                    "access_ipv6": "",
+                    "addresses": {
+                        "ami-01-network-admin_0199-dev": [
+                            {
+                                "OS-EXT-IPS-MAC:mac_addr": "fa:16:3e:50:80:a1",
+                                "OS-EXT-IPS:type": "fixed",
+                                "addr": "172.18.0.168",
+                                "version": 4
+                            },
+                            {
+                                "OS-EXT-IPS-MAC:mac_addr": "fa:16:3e:50:80:a1",
+                                "OS-EXT-IPS:type": "floating",
+                                "addr": "10.125.10.191",
+                                "version": 4
+                            }
+                        ],
+                        "ami-01-network-publi_0199-dev": [
+                            {
+                                "OS-EXT-IPS-MAC:mac_addr": "fa:16:3e:ed:aa:97",
+                                "OS-EXT-IPS:type": "fixed",
+                                "addr": "172.16.0.79",
+                                "version": 4
+                            }
+                        ]
+                    },
+                    "admin_password": null,
+                    "attached_volumes": [
+                        {
+                            "attachment_id": null,
+                            "bdm_id": null,
+                            "delete_on_termination": false,
+                            "device": null,
+                            "id": "373f3636-ee2e-45ca-b16b-74feab4c8552",
+                            "location": null,
+                            "name": null,
+                            "tag": null,
+                            "volume_id": null
+                        }
+                    ],
+                    "availability_zone": "AZ1",
+                    "block_device_mapping": null,
+                    "cloud": {
+                        "name": "formation5",
+                        "region": "RegionOne"
+                    },
+                    "compute_host": null,
+                    "config_drive": "",
+                    "created_at": "2023-03-30T11:55:21Z",
+                    "description": "ami-01-vm-collecte_0199-dev",
+                    "disk_config": "MANUAL",
+                    "fault": null,
+                    "flavor": {
+                        "description": null,
+                        "disk": 10,
+                        "ephemeral": 0,
+                        "extra_specs": {
+                            "production": "true"
+                        },
+                        "id": "CO1.1",
+                        "is_disabled": null,
+                        "is_public": true,
+                        "location": null,
+                        "name": "CO1.1",
+                        "original_name": "CO1.1",
+                        "ram": 2048,
+                        "rxtx_factor": null,
+                        "swap": 0,
+                        "vcpus": 1
+                    },
+                    "flavor_id": null,
+                    "has_config_drive": "",
+                    "host_id": "fbbeffedc2c562abf76d77782a05eaa43242db0a01b9d528b7840947",
+                    "host_status": null,
+                    "hostname": null,
+                    "hypervisor_hostname": null,
+                    "id": "690f779c-d80f-40b5-8b81-2341ce133126",
+                    "image": {
+                        "architecture": null,
+                        "checksum": null,
+                        "container_format": null,
+                        "created_at": null,
+                        "direct_url": null,
+                        "disk_format": null,
+                        "file": null,
+                        "has_auto_disk_config": null,
+                        "hash_algo": null,
+                        "hash_value": null,
+                        "hw_cpu_cores": null,
+                        "hw_cpu_policy": null,
+                        "hw_cpu_sockets": null,
+                        "hw_cpu_thread_policy": null,
+                        "hw_cpu_threads": null,
+                        "hw_disk_bus": null,
+                        "hw_machine_type": null,
+                        "hw_qemu_guest_agent": null,
+                        "hw_rng_model": null,
+                        "hw_scsi_model": null,
+                        "hw_serial_port_count": null,
+                        "hw_video_model": null,
+                        "hw_video_ram": null,
+                        "hw_vif_model": null,
+                        "hw_watchdog_action": null,
+                        "hypervisor_type": null,
+                        "id": "ccbd2e29-5baf-4d36-967c-41d8b3ad353d",
+                        "instance_type_rxtx_factor": null,
+                        "instance_uuid": null,
+                        "is_hidden": null,
+                        "is_hw_boot_menu_enabled": null,
+                        "is_hw_vif_multiqueue_enabled": null,
+                        "is_protected": null,
+                        "kernel_id": null,
+                        "location": null,
+                        "locations": null,
+                        "metadata": null,
+                        "min_disk": null,
+                        "min_ram": null,
+                        "name": null,
+                        "needs_config_drive": null,
+                        "needs_secure_boot": null,
+                        "os_admin_user": null,
+                        "os_command_line": null,
+                        "os_distro": null,
+                        "os_require_quiesce": null,
+                        "os_shutdown_timeout": null,
+                        "os_type": null,
+                        "os_version": null,
+                        "owner": null,
+                        "owner_id": null,
+                        "properties": {
+                            "links": [
+                                {
+                                    "href": "https://nuage01.dgfip.finances.rie.gouv.fr:8774/images/ccbd2e29-5baf-4d36-967c-41d8b3ad353d",
+                                    "rel": "bookmark"
+                                }
+                            ]
+                        },
+                        "ramdisk_id": null,
+                        "schema": null,
+                        "size": null,
+                        "status": null,
+                        "store": null,
+                        "tags": [],
+                        "updated_at": null,
+                        "url": null,
+                        "virtual_size": null,
+                        "visibility": null,
+                        "vm_mode": null,
+                        "vmware_adaptertype": null,
+                        "vmware_ostype": null
+                    },
+                    "image_id": null,
+                    "instance_name": null,
+                    "is_locked": false,
+                    "kernel_id": null,
+                    "key_name": "keypair_formation5",
+                    "launch_index": null,
+                    "launched_at": "2023-03-30T11:55:47.000000",
+                    "links": [
+                        {
+                            "href": "https://nuage01.dgfip.finances.rie.gouv.fr:8774/v2.1/servers/690f779c-d80f-40b5-8b81-2341ce133126",
+                            "rel": "self"
+                        },
+                        {
+                            "href": "https://nuage01.dgfip.finances.rie.gouv.fr:8774/servers/690f779c-d80f-40b5-8b81-2341ce133126",
+                            "rel": "bookmark"
+                        }
+                    ],
+                    "max_count": null,
+                    "metadata": {
+                        "group": "collecte",
+                        "platform_name": "ami_formation5"
+                    },
+                    "min_count": null,
+                    "name": "ami-01-vm-collecte_0199-dev",
+                    "networks": null,
+                    "power_state": 1,
+                    "progress": 0,
+                    "project_id": "0a6625bef95a45da8dd01b9ead14d010",
+                    "ramdisk_id": null,
+                    "reservation_id": null,
+                    "root_device_name": null,
+                    "scheduler_hints": null,
+                    "security_groups": [
+                        {
+                            "name": "ami-01-sg-monitoring_0199-dev"
+                        },
+                        {
+                            "name": "ami-01-sg-web_0199-dev"
+                        },
+                        {
+                            "name": "ami-01-sg-monitoring_0199-dev"
+                        },
+                        {
+                            "name": "ami-01-sg-ssh_0199-dev"
+                        },
+                        {
+                            "name": "ami-01-sg-web_0199-dev"
+                        }
+                    ],
+                    "server_groups": null,
+                    "status": "ACTIVE",
+                    "tags": [],
+                    "task_state": null,
+                    "terminated_at": null,
+                    "trusted_image_certificates": null,
+                    "updated_at": "2023-03-30T11:55:47Z",
+                    "user_data": null,
+                    "user_id": "aa0c5bad658146c0ade1b21ebd9065c1",
+                    "vm_state": "active",
+                    "volumes": [
+                        {
+                            "attachment_id": null,
+                            "bdm_id": null,
+                            "delete_on_termination": false,
+                            "device": null,
+                            "id": "373f3636-ee2e-45ca-b16b-74feab4c8552",
+                            "location": null,
+                            "name": null,
+                            "tag": null,
+                            "volume_id": null
+                        }
+                    ]
+                },
+                "ordonnancement_key_name": "id_rsa_ordonnancement.pub",
+                "os_environment": {
+                    "OS_CLOUD": "{{ deploy.cloud_name }}"
+                },
+                "os_password": "Agirmin_20211020",
+                "os_project_name": "DGFIP-SI1BAGIRMIN-Agirmin_dev",
+                "os_username": "DGFIP-SI1BAGIRMIN-Agirmin_dev-compte_technique",
+                "platform_name": "{{ deploy.platform_name }}",
+                "proxy_addr": "{{ proxy_ip }}:{{ proxy_port }}",
+                "proxy_ip": "10.154.68.7",
+                "proxy_port": "8080",
+                "relais_messagerie": "relaistest-agents-remise.appli.dgfip",
+                "server_name_loki": "loki-ami-01-vm-collecte_0199-dev",
+                "server_name_prometheus": "prometheus-ami-01-vm-collecte_0199-dev",
+                "statique_hosts_axis": " ",
+                "stf_conf_file1": "2IA_AGIRMIN_MEN_IIAAGIRMINMEN_IIA.conf",
+                "stf_conf_file2": "IIAAGIRMINMEN_2IA_AGIRMIN_MEN_IIA.conf",
+                "stf_conf_phase": "IIA",
+                "stf_key_name": "id_rsa_stf.pub.IIA",
+                "tomcat_version_rpm": "tomcat-9.0.12-1.1.DGFiP.noarch.rpm"
+            },
+            "ami-01-vm-echanges_0199-dev": {
+                "adm_net_cidr": "172.18.0.0/24",
+                "admin_network_name": "ami-01-network-admin_0199-dev",
+                "ami_db_name": "amidb",
+                "ami_local_repo": "/var/tmp/repo_ami",
+                "ami_rpm_dir": "6.0.1-SNAPSHOT",
+                "ami_rpm_type": "snapshots",
+                "ami_rpm_version": "6.0.1-20210928.125027-1",
+                "ansible_host": "10.125.15.109",
+                "ansible_python_interpreter": "/usr/bin/python",
+                "ansible_ssh_host": "10.125.15.109",
+                "ansible_user": "{{ linux_user }}",
+                "authorized_keys": [],
+                "beneficiaire": "DGFIP",
+                "cloud_name": "{{ deploy.cloud_name }}",
+                "collecte_name": "ami-01-vm-collecte_0199-dev",
+                "data_net_cidr": "192.168.0.0/24",
+                "data_network_name": "ami-01-network-data_0199-dev",
+                "deploy": {
+                    "cloud_name": "formation5",
+                    "platform_name": "formation5"
+                },
+                "host_bastion01": "ami-01-vm-bastion_0199-dev",
+                "host_bdd01": "ami-01-vm-bdd_0199-dev",
+                "host_clamav01": "ami-01-vm-clamav_0199-dev",
+                "host_collecte01": "ami-01-vm-collecte_0199-dev",
+                "host_echanges01": "ami-01-vm-echanges_0199-dev",
+                "host_itm01": "ami-01-vm-itm_0199-dev",
+                "host_mapi01": "ami-01-vm-mapi_0199-dev",
+                "install_rpm_suffix": "-install-dev-99",
+                "int_net_cidr": "172.16.0.0/24",
+                "internal_network_name": "ami-01-network-publi_0199-dev",
+                "ip_annuaire": "127.0.0.99",
+                "linux_groups": [
+                    {
+                        "gid": 1500,
+                        "name": "appgroup"
+                    }
+                ],
+                "linux_user": "cloudadm",
+                "linux_users": [
+                    {
+                        "comment": "demo appuser",
+                        "group": "appgroup",
+                        "groups": [],
+                        "home": "/home/appuser",
+                        "name": "appuser",
+                        "shell": "/bin/bash",
+                        "uid": 1500
+                    }
+                ],
+                "loki_url": "http://ami-01-vm-collecte_0199-dev-int:3100",
+                "mapi_hostname_int": "ami-01-vm-mapi_0199-dev-int",
+                "ne_labels_group": "couloir99",
+                "nexus_outillage_url": "http://nexus.picamidev.dgfip",
+                "nfs_server_name": "ami-01-vm-echanges_0199-dev-int",
+                "nom_annuaire": "annuaire-test-apor",
+                "ntp_server_nubo": "10.125.4.1",
+                "nuage_url": "nuage01",
+                "nubo": "NUBP01",
+                "openstack": {
+                    "access_ipv4": "",
+                    "access_ipv6": "",
+                    "addresses": {
+                        "ami-01-network-admin_0199-dev": [
+                            {
+                                "OS-EXT-IPS-MAC:mac_addr": "fa:16:3e:f8:a4:7a",
+                                "OS-EXT-IPS:type": "fixed",
+                                "addr": "172.18.0.76",
+                                "version": 4
+                            }
+                        ],
+                        "ami-01-network-publi_0199-dev": [
+                            {
+                                "OS-EXT-IPS-MAC:mac_addr": "fa:16:3e:20:71:24",
+                                "OS-EXT-IPS:type": "fixed",
+                                "addr": "172.16.0.238",
+                                "version": 4
+                            },
+                            {
+                                "OS-EXT-IPS-MAC:mac_addr": "fa:16:3e:20:71:24",
+                                "OS-EXT-IPS:type": "floating",
+                                "addr": "10.125.15.109",
+                                "version": 4
+                            }
+                        ]
+                    },
+                    "admin_password": null,
+                    "attached_volumes": [
+                        {
+                            "attachment_id": null,
+                            "bdm_id": null,
+                            "delete_on_termination": false,
+                            "device": null,
+                            "id": "641bd3ee-0d80-44ad-b240-586df7251fa7",
+                            "location": null,
+                            "name": null,
+                            "tag": null,
+                            "volume_id": null
+                        },
+                        {
+                            "attachment_id": null,
+                            "bdm_id": null,
+                            "delete_on_termination": false,
+                            "device": null,
+                            "id": "545588f5-08d4-4534-a924-6f0c2aa855ae",
+                            "location": null,
+                            "name": null,
+                            "tag": null,
+                            "volume_id": null
+                        }
+                    ],
+                    "availability_zone": "AZ1",
+                    "block_device_mapping": null,
+                    "cloud": {
+                        "name": "formation5",
+                        "region": "RegionOne"
+                    },
+                    "compute_host": null,
+                    "config_drive": "",
+                    "created_at": "2023-03-30T11:55:22Z",
+                    "description": "ami-01-vm-echanges_0199-dev",
+                    "disk_config": "MANUAL",
+                    "fault": null,
+                    "flavor": {
+                        "description": null,
+                        "disk": 10,
+                        "ephemeral": 0,
+                        "extra_specs": {
+                            "production": "true"
+                        },
+                        "id": "CO1.2",
+                        "is_disabled": null,
+                        "is_public": true,
+                        "location": null,
+                        "name": "CO1.2",
+                        "original_name": "CO1.2",
+                        "ram": 4096,
+                        "rxtx_factor": null,
+                        "swap": 0,
+                        "vcpus": 2
+                    },
+                    "flavor_id": null,
+                    "has_config_drive": "",
+                    "host_id": "dffcd5d61332edc0fdc1156b6513498dae8fe55f0d407aaa91c97a21",
+                    "host_status": null,
+                    "hostname": null,
+                    "hypervisor_hostname": null,
+                    "id": "a603afa7-3bc1-4b35-9d79-e7f8b7a7fe2c",
+                    "image": {
+                        "architecture": null,
+                        "checksum": null,
+                        "container_format": null,
+                        "created_at": null,
+                        "direct_url": null,
+                        "disk_format": null,
+                        "file": null,
+                        "has_auto_disk_config": null,
+                        "hash_algo": null,
+                        "hash_value": null,
+                        "hw_cpu_cores": null,
+                        "hw_cpu_policy": null,
+                        "hw_cpu_sockets": null,
+                        "hw_cpu_thread_policy": null,
+                        "hw_cpu_threads": null,
+                        "hw_disk_bus": null,
+                        "hw_machine_type": null,
+                        "hw_qemu_guest_agent": null,
+                        "hw_rng_model": null,
+                        "hw_scsi_model": null,
+                        "hw_serial_port_count": null,
+                        "hw_video_model": null,
+                        "hw_video_ram": null,
+                        "hw_vif_model": null,
+                        "hw_watchdog_action": null,
+                        "hypervisor_type": null,
+                        "id": "ccbd2e29-5baf-4d36-967c-41d8b3ad353d",
+                        "instance_type_rxtx_factor": null,
+                        "instance_uuid": null,
+                        "is_hidden": null,
+                        "is_hw_boot_menu_enabled": null,
+                        "is_hw_vif_multiqueue_enabled": null,
+                        "is_protected": null,
+                        "kernel_id": null,
+                        "location": null,
+                        "locations": null,
+                        "metadata": null,
+                        "min_disk": null,
+                        "min_ram": null,
+                        "name": null,
+                        "needs_config_drive": null,
+                        "needs_secure_boot": null,
+                        "os_admin_user": null,
+                        "os_command_line": null,
+                        "os_distro": null,
+                        "os_require_quiesce": null,
+                        "os_shutdown_timeout": null,
+                        "os_type": null,
+                        "os_version": null,
+                        "owner": null,
+                        "owner_id": null,
+                        "properties": {
+                            "links": [
+                                {
+                                    "href": "https://nuage01.dgfip.finances.rie.gouv.fr:8774/images/ccbd2e29-5baf-4d36-967c-41d8b3ad353d",
+                                    "rel": "bookmark"
+                                }
+                            ]
+                        },
+                        "ramdisk_id": null,
+                        "schema": null,
+                        "size": null,
+                        "status": null,
+                        "store": null,
+                        "tags": [],
+                        "updated_at": null,
+                        "url": null,
+                        "virtual_size": null,
+                        "visibility": null,
+                        "vm_mode": null,
+                        "vmware_adaptertype": null,
+                        "vmware_ostype": null
+                    },
+                    "image_id": null,
+                    "instance_name": null,
+                    "is_locked": false,
+                    "kernel_id": null,
+                    "key_name": "keypair_formation5",
+                    "launch_index": null,
+                    "launched_at": "2023-03-30T11:56:01.000000",
+                    "links": [
+                        {
+                            "href": "https://nuage01.dgfip.finances.rie.gouv.fr:8774/v2.1/servers/a603afa7-3bc1-4b35-9d79-e7f8b7a7fe2c",
+                            "rel": "self"
+                        },
+                        {
+                            "href": "https://nuage01.dgfip.finances.rie.gouv.fr:8774/servers/a603afa7-3bc1-4b35-9d79-e7f8b7a7fe2c",
+                            "rel": "bookmark"
+                        }
+                    ],
+                    "max_count": null,
+                    "metadata": {
+                        "flux_echanges_01": "Flux vers PassTrans 10.99.X.XX:8022",
+                        "group": "echanges",
+                        "platform_name": "ami_formation5"
+                    },
+                    "min_count": null,
+                    "name": "ami-01-vm-echanges_0199-dev",
+                    "networks": null,
+                    "power_state": 1,
+                    "progress": 0,
+                    "project_id": "0a6625bef95a45da8dd01b9ead14d010",
+                    "ramdisk_id": null,
+                    "reservation_id": null,
+                    "root_device_name": null,
+                    "scheduler_hints": null,
+                    "security_groups": [
+                        {
+                            "name": "ami-01-sg-monitoring_0199-dev"
+                        },
+                        {
+                            "name": "ami-01-sg-nfs_0199-dev"
+                        },
+                        {
+                            "name": "ami-01-sg-ssh_planprod_0199-dev"
+                        },
+                        {
+                            "name": "ami-01-sg-ssh_0199-dev"
+                        }
+                    ],
+                    "server_groups": null,
+                    "status": "ACTIVE",
+                    "tags": [],
+                    "task_state": null,
+                    "terminated_at": null,
+                    "trusted_image_certificates": null,
+                    "updated_at": "2023-03-30T11:56:01Z",
+                    "user_data": null,
+                    "user_id": "aa0c5bad658146c0ade1b21ebd9065c1",
+                    "vm_state": "active",
+                    "volumes": [
+                        {
+                            "attachment_id": null,
+                            "bdm_id": null,
+                            "delete_on_termination": false,
+                            "device": null,
+                            "id": "641bd3ee-0d80-44ad-b240-586df7251fa7",
+                            "location": null,
+                            "name": null,
+                            "tag": null,
+                            "volume_id": null
+                        },
+                        {
+                            "attachment_id": null,
+                            "bdm_id": null,
+                            "delete_on_termination": false,
+                            "device": null,
+                            "id": "545588f5-08d4-4534-a924-6f0c2aa855ae",
+                            "location": null,
+                            "name": null,
+                            "tag": null,
+                            "volume_id": null
+                        }
+                    ]
+                },
+                "ordonnancement_key_name": "id_rsa_ordonnancement.pub",
+                "os_environment": {
+                    "OS_CLOUD": "{{ deploy.cloud_name }}"
+                },
+                "os_password": "Agirmin_20211020",
+                "os_project_name": "DGFIP-SI1BAGIRMIN-Agirmin_dev",
+                "os_username": "DGFIP-SI1BAGIRMIN-Agirmin_dev-compte_technique",
+                "platform_name": "{{ deploy.platform_name }}",
+                "proxy_addr": "{{ proxy_ip }}:{{ proxy_port }}",
+                "proxy_ip": "10.154.68.7",
+                "proxy_port": "8080",
+                "relais_messagerie": "relaistest-agents-remise.appli.dgfip",
+                "server_name_loki": "loki-ami-01-vm-collecte_0199-dev",
+                "server_name_prometheus": "prometheus-ami-01-vm-collecte_0199-dev",
+                "statique_hosts_axis": " ",
+                "stf_conf_file1": "2IA_AGIRMIN_MEN_IIAAGIRMINMEN_IIA.conf",
+                "stf_conf_file2": "IIAAGIRMINMEN_2IA_AGIRMIN_MEN_IIA.conf",
+                "stf_conf_phase": "IIA",
+                "stf_key_name": "id_rsa_stf.pub.IIA",
+                "tomcat_version_rpm": "tomcat-9.0.12-1.1.DGFiP.noarch.rpm"
+            },
+            "ami-01-vm-itm_0199-dev": {
+                "adm_net_cidr": "172.18.0.0/24",
+                "admin_network_name": "ami-01-network-admin_0199-dev",
+                "ami_db_name": "amidb",
+                "ami_local_repo": "/var/tmp/repo_ami",
+                "ami_rpm_dir": "6.0.1-SNAPSHOT",
+                "ami_rpm_type": "snapshots",
+                "ami_rpm_version": "6.0.1-20210928.125027-1",
+                "ansible_host": "10.125.14.49",
+                "ansible_python_interpreter": "/usr/bin/python",
+                "ansible_ssh_host": "10.125.14.49",
+                "ansible_user": "{{ linux_user }}",
+                "authorized_keys": [],
+                "beneficiaire": "DGFIP",
+                "cloud_name": "{{ deploy.cloud_name }}",
+                "collecte_name": "ami-01-vm-collecte_0199-dev",
+                "data_net_cidr": "192.168.0.0/24",
+                "data_network_name": "ami-01-network-data_0199-dev",
+                "deploy": {
+                    "cloud_name": "formation5",
+                    "platform_name": "formation5"
+                },
+                "host_bastion01": "ami-01-vm-bastion_0199-dev",
+                "host_bdd01": "ami-01-vm-bdd_0199-dev",
+                "host_clamav01": "ami-01-vm-clamav_0199-dev",
+                "host_collecte01": "ami-01-vm-collecte_0199-dev",
+                "host_echanges01": "ami-01-vm-echanges_0199-dev",
+                "host_itm01": "ami-01-vm-itm_0199-dev",
+                "host_mapi01": "ami-01-vm-mapi_0199-dev",
+                "install_rpm_suffix": "-install-dev-99",
+                "int_net_cidr": "172.16.0.0/24",
+                "internal_network_name": "ami-01-network-publi_0199-dev",
+                "ip_annuaire": "127.0.0.99",
+                "linux_groups": [
+                    {
+                        "gid": 1500,
+                        "name": "appgroup"
+                    }
+                ],
+                "linux_user": "cloudadm",
+                "linux_users": [
+                    {
+                        "comment": "demo appuser",
+                        "group": "appgroup",
+                        "groups": [],
+                        "home": "/home/appuser",
+                        "name": "appuser",
+                        "shell": "/bin/bash",
+                        "uid": 1500
+                    }
+                ],
+                "loki_url": "http://ami-01-vm-collecte_0199-dev-int:3100",
+                "mapi_hostname_int": "ami-01-vm-mapi_0199-dev-int",
+                "ne_labels_group": "couloir99",
+                "nexus_outillage_url": "http://nexus.picamidev.dgfip",
+                "nfs_server_name": "ami-01-vm-echanges_0199-dev-int",
+                "nom_annuaire": "annuaire-test-apor",
+                "ntp_server_nubo": "10.125.4.1",
+                "nuage_url": "nuage01",
+                "nubo": "NUBP01",
+                "openstack": {
+                    "access_ipv4": "",
+                    "access_ipv6": "",
+                    "addresses": {
+                        "ami-01-network-admin_0199-dev": [
+                            {
+                                "OS-EXT-IPS-MAC:mac_addr": "fa:16:3e:21:49:76",
+                                "OS-EXT-IPS:type": "fixed",
+                                "addr": "172.18.0.137",
+                                "version": 4
+                            }
+                        ],
+                        "ami-01-network-data_0199-dev": [
+                            {
+                                "OS-EXT-IPS-MAC:mac_addr": "fa:16:3e:84:71:3f",
+                                "OS-EXT-IPS:type": "fixed",
+                                "addr": "192.168.0.18",
+                                "version": 4
+                            }
+                        ],
+                        "ami-01-network-publi_0199-dev": [
+                            {
+                                "OS-EXT-IPS-MAC:mac_addr": "fa:16:3e:2d:7f:8e",
+                                "OS-EXT-IPS:type": "fixed",
+                                "addr": "172.16.0.100",
+                                "version": 4
+                            },
+                            {
+                                "OS-EXT-IPS-MAC:mac_addr": "fa:16:3e:2d:7f:8e",
+                                "OS-EXT-IPS:type": "floating",
+                                "addr": "10.125.14.49",
+                                "version": 4
+                            }
+                        ]
+                    },
+                    "admin_password": null,
+                    "attached_volumes": [],
+                    "availability_zone": "AZ2",
+                    "block_device_mapping": null,
+                    "cloud": {
+                        "name": "formation5",
+                        "region": "RegionOne"
+                    },
+                    "compute_host": null,
+                    "config_drive": "",
+                    "created_at": "2023-03-30T11:55:18Z",
+                    "description": "ami-01-vm-itm_0199-dev",
+                    "disk_config": "MANUAL",
+                    "fault": null,
+                    "flavor": {
+                        "description": null,
+                        "disk": 10,
+                        "ephemeral": 0,
+                        "extra_specs": {
+                            "production": "true"
+                        },
+                        "id": "CO1.2",
+                        "is_disabled": null,
+                        "is_public": true,
+                        "location": null,
+                        "name": "CO1.2",
+                        "original_name": "CO1.2",
+                        "ram": 4096,
+                        "rxtx_factor": null,
+                        "swap": 0,
+                        "vcpus": 2
+                    },
+                    "flavor_id": null,
+                    "has_config_drive": "",
+                    "host_id": "c465930018869bbb46615baf6311d104c71348da7e2d9d3fe2c8b6eb",
+                    "host_status": null,
+                    "hostname": null,
+                    "hypervisor_hostname": null,
+                    "id": "c6cb707f-52ca-436a-8d97-d50e5892a6ef",
+                    "image": {
+                        "architecture": null,
+                        "checksum": null,
+                        "container_format": null,
+                        "created_at": null,
+                        "direct_url": null,
+                        "disk_format": null,
+                        "file": null,
+                        "has_auto_disk_config": null,
+                        "hash_algo": null,
+                        "hash_value": null,
+                        "hw_cpu_cores": null,
+                        "hw_cpu_policy": null,
+                        "hw_cpu_sockets": null,
+                        "hw_cpu_thread_policy": null,
+                        "hw_cpu_threads": null,
+                        "hw_disk_bus": null,
+                        "hw_machine_type": null,
+                        "hw_qemu_guest_agent": null,
+                        "hw_rng_model": null,
+                        "hw_scsi_model": null,
+                        "hw_serial_port_count": null,
+                        "hw_video_model": null,
+                        "hw_video_ram": null,
+                        "hw_vif_model": null,
+                        "hw_watchdog_action": null,
+                        "hypervisor_type": null,
+                        "id": "ccbd2e29-5baf-4d36-967c-41d8b3ad353d",
+                        "instance_type_rxtx_factor": null,
+                        "instance_uuid": null,
+                        "is_hidden": null,
+                        "is_hw_boot_menu_enabled": null,
+                        "is_hw_vif_multiqueue_enabled": null,
+                        "is_protected": null,
+                        "kernel_id": null,
+                        "location": null,
+                        "locations": null,
+                        "metadata": null,
+                        "min_disk": null,
+                        "min_ram": null,
+                        "name": null,
+                        "needs_config_drive": null,
+                        "needs_secure_boot": null,
+                        "os_admin_user": null,
+                        "os_command_line": null,
+                        "os_distro": null,
+                        "os_require_quiesce": null,
+                        "os_shutdown_timeout": null,
+                        "os_type": null,
+                        "os_version": null,
+                        "owner": null,
+                        "owner_id": null,
+                        "properties": {
+                            "links": [
+                                {
+                                    "href": "https://nuage01.dgfip.finances.rie.gouv.fr:8774/images/ccbd2e29-5baf-4d36-967c-41d8b3ad353d",
+                                    "rel": "bookmark"
+                                }
+                            ]
+                        },
+                        "ramdisk_id": null,
+                        "schema": null,
+                        "size": null,
+                        "status": null,
+                        "store": null,
+                        "tags": [],
+                        "updated_at": null,
+                        "url": null,
+                        "virtual_size": null,
+                        "visibility": null,
+                        "vm_mode": null,
+                        "vmware_adaptertype": null,
+                        "vmware_ostype": null
+                    },
+                    "image_id": null,
+                    "instance_name": null,
+                    "is_locked": false,
+                    "kernel_id": null,
+                    "key_name": "keypair_formation5",
+                    "launch_index": null,
+                    "launched_at": "2023-03-30T11:56:13.000000",
+                    "links": [
+                        {
+                            "href": "https://nuage01.dgfip.finances.rie.gouv.fr:8774/v2.1/servers/c6cb707f-52ca-436a-8d97-d50e5892a6ef",
+                            "rel": "self"
+                        },
+                        {
+                            "href": "https://nuage01.dgfip.finances.rie.gouv.fr:8774/servers/c6cb707f-52ca-436a-8d97-d50e5892a6ef",
+                            "rel": "bookmark"
+                        }
+                    ],
+                    "max_count": null,
+                    "metadata": {
+                        "flux_itm_01": "Flux vers ITM 10.X.X.X:YYYY",
+                        "group": "itm",
+                        "platform_name": "ami_formation5"
+                    },
+                    "min_count": null,
+                    "name": "ami-01-vm-itm_0199-dev",
+                    "networks": null,
+                    "power_state": 1,
+                    "progress": 0,
+                    "project_id": "0a6625bef95a45da8dd01b9ead14d010",
+                    "ramdisk_id": null,
+                    "reservation_id": null,
+                    "root_device_name": null,
+                    "scheduler_hints": null,
+                    "security_groups": [
+                        {
+                            "name": "ami-01-sg-ssh_0199-dev"
+                        },
+                        {
+                            "name": "default"
+                        },
+                        {
+                            "name": "ami-01-sg-monitoring_0199-dev"
+                        },
+                        {
+                            "name": "ami-01-sg-clamav_0199-dev"
+                        }
+                    ],
+                    "server_groups": null,
+                    "status": "ACTIVE",
+                    "tags": [],
+                    "task_state": null,
+                    "terminated_at": null,
+                    "trusted_image_certificates": null,
+                    "updated_at": "2023-03-30T11:56:13Z",
+                    "user_data": null,
+                    "user_id": "aa0c5bad658146c0ade1b21ebd9065c1",
+                    "vm_state": "active",
+                    "volumes": []
+                },
+                "ordonnancement_key_name": "id_rsa_ordonnancement.pub",
+                "os_environment": {
+                    "OS_CLOUD": "{{ deploy.cloud_name }}"
+                },
+                "os_password": "Agirmin_20211020",
+                "os_project_name": "DGFIP-SI1BAGIRMIN-Agirmin_dev",
+                "os_username": "DGFIP-SI1BAGIRMIN-Agirmin_dev-compte_technique",
+                "platform_name": "{{ deploy.platform_name }}",
+                "proxy_addr": "{{ proxy_ip }}:{{ proxy_port }}",
+                "proxy_ip": "10.154.68.7",
+                "proxy_port": "8080",
+                "relais_messagerie": "relaistest-agents-remise.appli.dgfip",
+                "server_name_loki": "loki-ami-01-vm-collecte_0199-dev",
+                "server_name_prometheus": "prometheus-ami-01-vm-collecte_0199-dev",
+                "statique_hosts_axis": " ",
+                "stf_conf_file1": "2IA_AGIRMIN_MEN_IIAAGIRMINMEN_IIA.conf",
+                "stf_conf_file2": "IIAAGIRMINMEN_2IA_AGIRMIN_MEN_IIA.conf",
+                "stf_conf_phase": "IIA",
+                "stf_key_name": "id_rsa_stf.pub.IIA",
+                "tomcat_version_rpm": "tomcat-9.0.12-1.1.DGFiP.noarch.rpm"
+            },
+            "ami-01-vm-mapi_0199-dev": {
+                "adm_net_cidr": "172.18.0.0/24",
+                "admin_network_name": "ami-01-network-admin_0199-dev",
+                "ami_db_name": "amidb",
+                "ami_local_repo": "/var/tmp/repo_ami",
+                "ami_rpm_dir": "6.0.1-SNAPSHOT",
+                "ami_rpm_type": "snapshots",
+                "ami_rpm_version": "6.0.1-20210928.125027-1",
+                "ansible_host": "10.125.15.52",
+                "ansible_python_interpreter": "/usr/bin/python",
+                "ansible_ssh_host": "10.125.15.52",
+                "ansible_user": "{{ linux_user }}",
+                "authorized_keys": [],
+                "beneficiaire": "DGFIP",
+                "cloud_name": "{{ deploy.cloud_name }}",
+                "collecte_name": "ami-01-vm-collecte_0199-dev",
+                "data_net_cidr": "192.168.0.0/24",
+                "data_network_name": "ami-01-network-data_0199-dev",
+                "deploy": {
+                    "cloud_name": "formation5",
+                    "platform_name": "formation5"
+                },
+                "host_bastion01": "ami-01-vm-bastion_0199-dev",
+                "host_bdd01": "ami-01-vm-bdd_0199-dev",
+                "host_clamav01": "ami-01-vm-clamav_0199-dev",
+                "host_collecte01": "ami-01-vm-collecte_0199-dev",
+                "host_echanges01": "ami-01-vm-echanges_0199-dev",
+                "host_itm01": "ami-01-vm-itm_0199-dev",
+                "host_mapi01": "ami-01-vm-mapi_0199-dev",
+                "install_rpm_suffix": "-install-dev-99",
+                "int_net_cidr": "172.16.0.0/24",
+                "internal_network_name": "ami-01-network-publi_0199-dev",
+                "ip_annuaire": "127.0.0.99",
+                "linux_groups": [
+                    {
+                        "gid": 1500,
+                        "name": "appgroup"
+                    }
+                ],
+                "linux_user": "cloudadm",
+                "linux_users": [
+                    {
+                        "comment": "demo appuser",
+                        "group": "appgroup",
+                        "groups": [],
+                        "home": "/home/appuser",
+                        "name": "appuser",
+                        "shell": "/bin/bash",
+                        "uid": 1500
+                    }
+                ],
+                "loki_url": "http://ami-01-vm-collecte_0199-dev-int:3100",
+                "mapi_hostname_int": "ami-01-vm-mapi_0199-dev-int",
+                "ne_labels_group": "couloir99",
+                "nexus_outillage_url": "http://nexus.picamidev.dgfip",
+                "nfs_server_name": "ami-01-vm-echanges_0199-dev-int",
+                "nom_annuaire": "annuaire-test-apor",
+                "ntp_server_nubo": "10.125.4.1",
+                "nuage_url": "nuage01",
+                "nubo": "NUBP01",
+                "openstack": {
+                    "access_ipv4": "",
+                    "access_ipv6": "",
+                    "addresses": {
+                        "ami-01-network-admin_0199-dev": [
+                            {
+                                "OS-EXT-IPS-MAC:mac_addr": "fa:16:3e:67:b8:db",
+                                "OS-EXT-IPS:type": "fixed",
+                                "addr": "172.18.0.152",
+                                "version": 4
+                            }
+                        ],
+                        "ami-01-network-data_0199-dev": [
+                            {
+                                "OS-EXT-IPS-MAC:mac_addr": "fa:16:3e:c3:92:47",
+                                "OS-EXT-IPS:type": "fixed",
+                                "addr": "192.168.0.79",
+                                "version": 4
+                            }
+                        ],
+                        "ami-01-network-publi_0199-dev": [
+                            {
+                                "OS-EXT-IPS-MAC:mac_addr": "fa:16:3e:ff:6f:99",
+                                "OS-EXT-IPS:type": "fixed",
+                                "addr": "172.16.0.90",
+                                "version": 4
+                            },
+                            {
+                                "OS-EXT-IPS-MAC:mac_addr": "fa:16:3e:ff:6f:99",
+                                "OS-EXT-IPS:type": "floating",
+                                "addr": "10.125.15.52",
+                                "version": 4
+                            }
+                        ]
+                    },
+                    "admin_password": null,
+                    "attached_volumes": [
+                        {
+                            "attachment_id": null,
+                            "bdm_id": null,
+                            "delete_on_termination": false,
+                            "device": null,
+                            "id": "9e3c1847-8ceb-49f8-8c81-ebb7f5ee1523",
+                            "location": null,
+                            "name": null,
+                            "tag": null,
+                            "volume_id": null
+                        }
+                    ],
+                    "availability_zone": "AZ1",
+                    "block_device_mapping": null,
+                    "cloud": {
+                        "name": "formation5",
+                        "region": "RegionOne"
+                    },
+                    "compute_host": null,
+                    "config_drive": "",
+                    "created_at": "2023-03-30T11:55:20Z",
+                    "description": "ami-01-vm-mapi_0199-dev",
+                    "disk_config": "MANUAL",
+                    "fault": null,
+                    "flavor": {
+                        "description": null,
+                        "disk": 10,
+                        "ephemeral": 0,
+                        "extra_specs": {
+                            "production": "true"
+                        },
+                        "id": "UG1.2",
+                        "is_disabled": null,
+                        "is_public": true,
+                        "location": null,
+                        "name": "UG1.2",
+                        "original_name": "UG1.2",
+                        "ram": 8192,
+                        "rxtx_factor": null,
+                        "swap": 0,
+                        "vcpus": 2
+                    },
+                    "flavor_id": null,
+                    "has_config_drive": "",
+                    "host_id": "fbbeffedc2c562abf76d77782a05eaa43242db0a01b9d528b7840947",
+                    "host_status": null,
+                    "hostname": null,
+                    "hypervisor_hostname": null,
+                    "id": "434ea8e3-3b82-4b2d-9c00-ed462ef80605",
+                    "image": {
+                        "architecture": null,
+                        "checksum": null,
+                        "container_format": null,
+                        "created_at": null,
+                        "direct_url": null,
+                        "disk_format": null,
+                        "file": null,
+                        "has_auto_disk_config": null,
+                        "hash_algo": null,
+                        "hash_value": null,
+                        "hw_cpu_cores": null,
+                        "hw_cpu_policy": null,
+                        "hw_cpu_sockets": null,
+                        "hw_cpu_thread_policy": null,
+                        "hw_cpu_threads": null,
+                        "hw_disk_bus": null,
+                        "hw_machine_type": null,
+                        "hw_qemu_guest_agent": null,
+                        "hw_rng_model": null,
+                        "hw_scsi_model": null,
+                        "hw_serial_port_count": null,
+                        "hw_video_model": null,
+                        "hw_video_ram": null,
+                        "hw_vif_model": null,
+                        "hw_watchdog_action": null,
+                        "hypervisor_type": null,
+                        "id": "ccbd2e29-5baf-4d36-967c-41d8b3ad353d",
+                        "instance_type_rxtx_factor": null,
+                        "instance_uuid": null,
+                        "is_hidden": null,
+                        "is_hw_boot_menu_enabled": null,
+                        "is_hw_vif_multiqueue_enabled": null,
+                        "is_protected": null,
+                        "kernel_id": null,
+                        "location": null,
+                        "locations": null,
+                        "metadata": null,
+                        "min_disk": null,
+                        "min_ram": null,
+                        "name": null,
+                        "needs_config_drive": null,
+                        "needs_secure_boot": null,
+                        "os_admin_user": null,
+                        "os_command_line": null,
+                        "os_distro": null,
+                        "os_require_quiesce": null,
+                        "os_shutdown_timeout": null,
+                        "os_type": null,
+                        "os_version": null,
+                        "owner": null,
+                        "owner_id": null,
+                        "properties": {
+                            "links": [
+                                {
+                                    "href": "https://nuage01.dgfip.finances.rie.gouv.fr:8774/images/ccbd2e29-5baf-4d36-967c-41d8b3ad353d",
+                                    "rel": "bookmark"
+                                }
+                            ]
+                        },
+                        "ramdisk_id": null,
+                        "schema": null,
+                        "size": null,
+                        "status": null,
+                        "store": null,
+                        "tags": [],
+                        "updated_at": null,
+                        "url": null,
+                        "virtual_size": null,
+                        "visibility": null,
+                        "vm_mode": null,
+                        "vmware_adaptertype": null,
+                        "vmware_ostype": null
+                    },
+                    "image_id": null,
+                    "instance_name": null,
+                    "is_locked": false,
+                    "kernel_id": null,
+                    "key_name": "keypair_formation5",
+                    "launch_index": null,
+                    "launched_at": "2023-03-30T11:56:03.000000",
+                    "links": [
+                        {
+                            "href": "https://nuage01.dgfip.finances.rie.gouv.fr:8774/v2.1/servers/434ea8e3-3b82-4b2d-9c00-ed462ef80605",
+                            "rel": "self"
+                        },
+                        {
+                            "href": "https://nuage01.dgfip.finances.rie.gouv.fr:8774/servers/434ea8e3-3b82-4b2d-9c00-ed462ef80605",
+                            "rel": "bookmark"
+                        }
+                    ],
+                    "max_count": null,
+                    "metadata": {
+                        "flux_mapi_01": "Flux vers ldaps 10.XXX.XX.XX:636",
+                        "flux_mapi_02": "Flux vers ldap 10.XXX.XX.XX:389",
+                        "flux_mapi_03": "Flux vers stf 10.XXX.XX.XX:8180",
+                        "flux_mapi_04": "Flux vers axis 10.XXX.XX.XX:17911",
+                        "flux_mapi_05": "Flux vers smtp relaistest-agents-remise 100.67.244.89:25",
+                        "flux_mapi_06": "Flux vers stf Unifie 10.XXX.XX.XX:8000",
+                        "group": "mapi",
+                        "platform_name": "ami_formation5"
+                    },
+                    "min_count": null,
+                    "name": "ami-01-vm-mapi_0199-dev",
+                    "networks": null,
+                    "power_state": 1,
+                    "progress": 0,
+                    "project_id": "0a6625bef95a45da8dd01b9ead14d010",
+                    "ramdisk_id": null,
+                    "reservation_id": null,
+                    "root_device_name": null,
+                    "scheduler_hints": null,
+                    "security_groups": [
+                        {
+                            "name": "ami-01-sg-ssh_0199-dev"
+                        },
+                        {
+                            "name": "default"
+                        },
+                        {
+                            "name": "ami-01-sg-monitoring_0199-dev"
+                        },
+                        {
+                            "name": "ami-01-sg-tomcat_0199-dev"
+                        },
+                        {
+                            "name": "ami-01-sg-web_0199-dev"
+                        }
+                    ],
+                    "server_groups": null,
+                    "status": "ACTIVE",
+                    "tags": [],
+                    "task_state": null,
+                    "terminated_at": null,
+                    "trusted_image_certificates": null,
+                    "updated_at": "2023-03-30T11:56:03Z",
+                    "user_data": null,
+                    "user_id": "aa0c5bad658146c0ade1b21ebd9065c1",
+                    "vm_state": "active",
+                    "volumes": [
+                        {
+                            "attachment_id": null,
+                            "bdm_id": null,
+                            "delete_on_termination": false,
+                            "device": null,
+                            "id": "9e3c1847-8ceb-49f8-8c81-ebb7f5ee1523",
+                            "location": null,
+                            "name": null,
+                            "tag": null,
+                            "volume_id": null
+                        }
+                    ]
+                },
+                "ordonnancement_key_name": "id_rsa_ordonnancement.pub",
+                "os_environment": {
+                    "OS_CLOUD": "{{ deploy.cloud_name }}"
+                },
+                "os_password": "Agirmin_20211020",
+                "os_project_name": "DGFIP-SI1BAGIRMIN-Agirmin_dev",
+                "os_username": "DGFIP-SI1BAGIRMIN-Agirmin_dev-compte_technique",
+                "platform_name": "{{ deploy.platform_name }}",
+                "proxy_addr": "{{ proxy_ip }}:{{ proxy_port }}",
+                "proxy_ip": "10.154.68.7",
+                "proxy_port": "8080",
+                "relais_messagerie": "relaistest-agents-remise.appli.dgfip",
+                "server_name_loki": "loki-ami-01-vm-collecte_0199-dev",
+                "server_name_prometheus": "prometheus-ami-01-vm-collecte_0199-dev",
+                "statique_hosts_axis": " ",
+                "stf_conf_file1": "2IA_AGIRMIN_MEN_IIAAGIRMINMEN_IIA.conf",
+                "stf_conf_file2": "IIAAGIRMINMEN_2IA_AGIRMIN_MEN_IIA.conf",
+                "stf_conf_phase": "IIA",
+                "stf_key_name": "id_rsa_stf.pub.IIA",
+                "tomcat_version_rpm": "tomcat-9.0.12-1.1.DGFiP.noarch.rpm"
+            },
+            "localhost": {
+                "adm_net_cidr": "172.18.0.0/24",
+                "admin_network_name": "ami-01-network-admin_0199-dev",
+                "ami_db_name": "amidb",
+                "ami_local_repo": "/var/tmp/repo_ami",
+                "ami_rpm_dir": "6.0.1-SNAPSHOT",
+                "ami_rpm_type": "snapshots",
+                "ami_rpm_version": "6.0.1-20210928.125027-1",
+                "ansible_connection": "local",
+                "ansible_python_interpreter": "python3",
+                "ansible_user": "{{ linux_user }}",
+                "authorized_keys": [],
+                "beneficiaire": "DGFIP",
+                "cloud_name": "{{ deploy.cloud_name }}",
+                "collecte_name": "ami-01-vm-collecte_0199-dev",
+                "data_net_cidr": "192.168.0.0/24",
+                "data_network_name": "ami-01-network-data_0199-dev",
+                "deploy": {
+                    "cloud_name": "formation5",
+                    "platform_name": "formation5"
+                },
+                "host_bastion01": "ami-01-vm-bastion_0199-dev",
+                "host_bdd01": "ami-01-vm-bdd_0199-dev",
+                "host_clamav01": "ami-01-vm-clamav_0199-dev",
+                "host_collecte01": "ami-01-vm-collecte_0199-dev",
+                "host_echanges01": "ami-01-vm-echanges_0199-dev",
+                "host_itm01": "ami-01-vm-itm_0199-dev",
+                "host_mapi01": "ami-01-vm-mapi_0199-dev",
+                "install_rpm_suffix": "-install-dev-99",
+                "int_net_cidr": "172.16.0.0/24",
+                "internal_network_name": "ami-01-network-publi_0199-dev",
+                "ip_annuaire": "127.0.0.99",
+                "linux_groups": [
+                    {
+                        "gid": 1500,
+                        "name": "appgroup"
+                    }
+                ],
+                "linux_user": "cloudadm",
+                "linux_users": [
+                    {
+                        "comment": "demo appuser",
+                        "group": "appgroup",
+                        "groups": [],
+                        "home": "/home/appuser",
+                        "name": "appuser",
+                        "shell": "/bin/bash",
+                        "uid": 1500
+                    }
+                ],
+                "loki_url": "http://ami-01-vm-collecte_0199-dev-int:3100",
+                "mapi_hostname_int": "ami-01-vm-mapi_0199-dev-int",
+                "ne_labels_group": "couloir99",
+                "nexus_outillage_url": "http://nexus.picamidev.dgfip",
+                "nfs_server_name": "ami-01-vm-echanges_0199-dev-int",
+                "nom_annuaire": "annuaire-test-apor",
+                "ntp_server_nubo": "10.125.4.1",
+                "nuage_url": "nuage01",
+                "nubo": "NUBP01",
+                "ordonnancement_key_name": "id_rsa_ordonnancement.pub",
+                "os_environment": {
+                    "OS_CLOUD": "{{ deploy.cloud_name }}"
+                },
+                "os_password": "Agirmin_20211020",
+                "os_project_name": "DGFIP-SI1BAGIRMIN-Agirmin_dev",
+                "os_username": "DGFIP-SI1BAGIRMIN-Agirmin_dev-compte_technique",
+                "platform_name": "{{ deploy.platform_name }}",
+                "proxy_addr": "{{ proxy_ip }}:{{ proxy_port }}",
+                "proxy_ip": "10.154.68.7",
+                "proxy_port": "8080",
+                "relais_messagerie": "relaistest-agents-remise.appli.dgfip",
+                "server_name_loki": "loki-ami-01-vm-collecte_0199-dev",
+                "server_name_prometheus": "prometheus-ami-01-vm-collecte_0199-dev",
+                "statique_hosts_axis": " ",
+                "stf_conf_file1": "2IA_AGIRMIN_MEN_IIAAGIRMINMEN_IIA.conf",
+                "stf_conf_file2": "IIAAGIRMINMEN_2IA_AGIRMIN_MEN_IIA.conf",
+                "stf_conf_phase": "IIA",
+                "stf_key_name": "id_rsa_stf.pub.IIA",
+                "tomcat_version_rpm": "tomcat-9.0.12-1.1.DGFiP.noarch.rpm"
+            }
+        }
+    },
+    "all": {
+        "children": [
+            "AZ1",
+            "AZ2",
+            "RegionOne",
+            "RegionOne_AZ1",
+            "RegionOne_AZ2",
+            "bastion",
+            "bdd",
+            "clamav",
+            "collecte",
+            "echanges",
+            "flavor-CO1.1",
+            "flavor-CO1.2",
+            "flavor-CO1.4",
+            "flavor-UG1.2",
+            "formation5",
+            "formation5_RegionOne",
+            "formation5_RegionOne_AZ1",
+            "formation5_RegionOne_AZ2",
+            "image-None",
+            "instance-20730b37-1708-41d4-80b4-29a053ce9cfa",
+            "instance-434ea8e3-3b82-4b2d-9c00-ed462ef80605",
+            "instance-4df80cdd-3d02-409e-b0a5-455aa0759874",
+            "instance-690f779c-d80f-40b5-8b81-2341ce133126",
+            "instance-a603afa7-3bc1-4b35-9d79-e7f8b7a7fe2c",
+            "instance-c1c5d240-c251-4c89-a307-e4dc1f10e850",
+            "instance-c6cb707f-52ca-436a-8d97-d50e5892a6ef",
+            "itm",
+            "mapi",
+            "meta-flux_clamav_01_Flux vers proxy-antivirus 10.154.68.19:8080",
+            "meta-flux_echanges_01_Flux vers PassTrans 10.99.X.XX:8022",
+            "meta-flux_itm_01_Flux vers ITM 10.X.X.X:YYYY",
+            "meta-flux_mapi_01_Flux vers ldaps 10.XXX.XX.XX:636",
+            "meta-flux_mapi_02_Flux vers ldap 10.XXX.XX.XX:389",
+            "meta-flux_mapi_03_Flux vers stf 10.XXX.XX.XX:8180",
+            "meta-flux_mapi_04_Flux vers axis 10.XXX.XX.XX:17911",
+            "meta-flux_mapi_05_Flux vers smtp relaistest-agents-remise 100.67.244.89:25",
+            "meta-flux_mapi_06_Flux vers stf Unifie 10.XXX.XX.XX:8000",
+            "meta-group_bastion",
+            "meta-group_bdd",
+            "meta-group_clamav",
+            "meta-group_collecte",
+            "meta-group_echanges",
+            "meta-group_itm",
+            "meta-group_mapi",
+            "meta-platform_name_ami_formation5",
+            "ungrouped"
+        ]
+    },
+    "bastion": {
+        "hosts": [
+            "ami-01-vm-bastion_0199-dev"
+        ]
+    },
+    "bdd": {
+        "hosts": [
+            "ami-01-vm-bdd_0199-dev"
+        ]
+    },
+    "clamav": {
+        "hosts": [
+            "ami-01-vm-clamav_0199-dev"
+        ]
+    },
+    "collecte": {
+        "hosts": [
+            "ami-01-vm-collecte_0199-dev"
+        ]
+    },
+    "echanges": {
+        "hosts": [
+            "ami-01-vm-echanges_0199-dev"
+        ]
+    },
+    "flavor-CO1.1": {
+        "hosts": [
+            "ami-01-vm-bastion_0199-dev",
+            "ami-01-vm-collecte_0199-dev"
+        ]
+    },
+    "flavor-CO1.2": {
+        "hosts": [
+            "ami-01-vm-clamav_0199-dev",
+            "ami-01-vm-echanges_0199-dev",
+            "ami-01-vm-itm_0199-dev"
+        ]
+    },
+    "flavor-CO1.4": {
+        "hosts": [
+            "ami-01-vm-bdd_0199-dev"
+        ]
+    },
+    "flavor-UG1.2": {
+        "hosts": [
+            "ami-01-vm-mapi_0199-dev"
+        ]
+    },
+    "formation5": {
+        "hosts": [
+            "ami-01-vm-bastion_0199-dev",
+            "ami-01-vm-bdd_0199-dev",
+            "ami-01-vm-clamav_0199-dev",
+            "ami-01-vm-collecte_0199-dev",
+            "ami-01-vm-echanges_0199-dev",
+            "ami-01-vm-itm_0199-dev",
+            "ami-01-vm-mapi_0199-dev"
+        ]
+    },
+    "formation5_RegionOne": {
+        "hosts": [
+            "ami-01-vm-bastion_0199-dev",
+            "ami-01-vm-bdd_0199-dev",
+            "ami-01-vm-clamav_0199-dev",
+            "ami-01-vm-collecte_0199-dev",
+            "ami-01-vm-echanges_0199-dev",
+            "ami-01-vm-itm_0199-dev",
+            "ami-01-vm-mapi_0199-dev"
+        ]
+    },
+    "formation5_RegionOne_AZ1": {
+        "hosts": [
+            "ami-01-vm-collecte_0199-dev",
+            "ami-01-vm-echanges_0199-dev",
+            "ami-01-vm-mapi_0199-dev"
+        ]
+    },
+    "formation5_RegionOne_AZ2": {
+        "hosts": [
+            "ami-01-vm-bastion_0199-dev",
+            "ami-01-vm-bdd_0199-dev",
+            "ami-01-vm-clamav_0199-dev",
+            "ami-01-vm-itm_0199-dev"
+        ]
+    },
+    "image-None": {
+        "hosts": [
+            "ami-01-vm-bastion_0199-dev",
+            "ami-01-vm-bdd_0199-dev",
+            "ami-01-vm-clamav_0199-dev",
+            "ami-01-vm-collecte_0199-dev",
+            "ami-01-vm-echanges_0199-dev",
+            "ami-01-vm-itm_0199-dev",
+            "ami-01-vm-mapi_0199-dev"
+        ]
+    },
+    "instance-20730b37-1708-41d4-80b4-29a053ce9cfa": {
+        "hosts": [
+            "ami-01-vm-bastion_0199-dev"
+        ]
+    },
+    "instance-434ea8e3-3b82-4b2d-9c00-ed462ef80605": {
+        "hosts": [
+            "ami-01-vm-mapi_0199-dev"
+        ]
+    },
+    "instance-4df80cdd-3d02-409e-b0a5-455aa0759874": {
+        "hosts": [
+            "ami-01-vm-bdd_0199-dev"
+        ]
+    },
+    "instance-690f779c-d80f-40b5-8b81-2341ce133126": {
+        "hosts": [
+            "ami-01-vm-collecte_0199-dev"
+        ]
+    },
+    "instance-a603afa7-3bc1-4b35-9d79-e7f8b7a7fe2c": {
+        "hosts": [
+            "ami-01-vm-echanges_0199-dev"
+        ]
+    },
+    "instance-c1c5d240-c251-4c89-a307-e4dc1f10e850": {
+        "hosts": [
+            "ami-01-vm-clamav_0199-dev"
+        ]
+    },
+    "instance-c6cb707f-52ca-436a-8d97-d50e5892a6ef": {
+        "hosts": [
+            "ami-01-vm-itm_0199-dev"
+        ]
+    },
+    "itm": {
+        "hosts": [
+            "ami-01-vm-itm_0199-dev"
+        ]
+    },
+    "mapi": {
+        "hosts": [
+            "ami-01-vm-mapi_0199-dev"
+        ]
+    },
+    "meta-flux_clamav_01_Flux vers proxy-antivirus 10.154.68.19:8080": {
+        "hosts": [
+            "ami-01-vm-clamav_0199-dev"
+        ]
+    },
+    "meta-flux_echanges_01_Flux vers PassTrans 10.99.X.XX:8022": {
+        "hosts": [
+            "ami-01-vm-echanges_0199-dev"
+        ]
+    },
+    "meta-flux_itm_01_Flux vers ITM 10.X.X.X:YYYY": {
+        "hosts": [
+            "ami-01-vm-itm_0199-dev"
+        ]
+    },
+    "meta-flux_mapi_01_Flux vers ldaps 10.XXX.XX.XX:636": {
+        "hosts": [
+            "ami-01-vm-mapi_0199-dev"
+        ]
+    },
+    "meta-flux_mapi_02_Flux vers ldap 10.XXX.XX.XX:389": {
+        "hosts": [
+            "ami-01-vm-mapi_0199-dev"
+        ]
+    },
+    "meta-flux_mapi_03_Flux vers stf 10.XXX.XX.XX:8180": {
+        "hosts": [
+            "ami-01-vm-mapi_0199-dev"
+        ]
+    },
+    "meta-flux_mapi_04_Flux vers axis 10.XXX.XX.XX:17911": {
+        "hosts": [
+            "ami-01-vm-mapi_0199-dev"
+        ]
+    },
+    "meta-flux_mapi_05_Flux vers smtp relaistest-agents-remise 100.67.244.89:25": {
+        "hosts": [
+            "ami-01-vm-mapi_0199-dev"
+        ]
+    },
+    "meta-flux_mapi_06_Flux vers stf Unifie 10.XXX.XX.XX:8000": {
+        "hosts": [
+            "ami-01-vm-mapi_0199-dev"
+        ]
+    },
+    "meta-group_bastion": {
+        "hosts": [
+            "ami-01-vm-bastion_0199-dev"
+        ]
+    },
+    "meta-group_bdd": {
+        "hosts": [
+            "ami-01-vm-bdd_0199-dev"
+        ]
+    },
+    "meta-group_clamav": {
+        "hosts": [
+            "ami-01-vm-clamav_0199-dev"
+        ]
+    },
+    "meta-group_collecte": {
+        "hosts": [
+            "ami-01-vm-collecte_0199-dev"
+        ]
+    },
+    "meta-group_echanges": {
+        "hosts": [
+            "ami-01-vm-echanges_0199-dev"
+        ]
+    },
+    "meta-group_itm": {
+        "hosts": [
+            "ami-01-vm-itm_0199-dev"
+        ]
+    },
+    "meta-group_mapi": {
+        "hosts": [
+            "ami-01-vm-mapi_0199-dev"
+        ]
+    },
+    "meta-platform_name_ami_formation5": {
+        "hosts": [
+            "ami-01-vm-bastion_0199-dev",
+            "ami-01-vm-bdd_0199-dev",
+            "ami-01-vm-clamav_0199-dev",
+            "ami-01-vm-collecte_0199-dev",
+            "ami-01-vm-echanges_0199-dev",
+            "ami-01-vm-itm_0199-dev",
+            "ami-01-vm-mapi_0199-dev"
+        ]
+    },
+    "ungrouped": {
+        "hosts": [
+            "localhost"
+        ]
+    }
+}
