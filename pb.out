@@ -1,0 +1,54 @@
+ansible-playbook 2.10.17
+  config file = None
+  configured module search path = ['/home/ops63-florentin01/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']
+  ansible python module location = /home/ops63-florentin01/ansible_2.10/lib/python3.6/site-packages/ansible
+  executable location = /home/ops63-florentin01/ansible_2.10/bin/ansible-playbook
+  python version = 3.6.15 (default, Apr 25 2022, 01:55:53) [GCC 9.4.0]
+No config file found; using defaults
+setting up inventory plugins
+host_list declined parsing /home/ops63-florentin01/sources/openstack-form5/AgirMinDev99-22Mars/PIC/outils_light/devops63/ansible/tenant_outils/inventories/dev/01-localhost.yml as it did not pass its verify_file() method
+script declined parsing /home/ops63-florentin01/sources/openstack-form5/AgirMinDev99-22Mars/PIC/outils_light/devops63/ansible/tenant_outils/inventories/dev/01-localhost.yml as it did not pass its verify_file() method
+Parsed /home/ops63-florentin01/sources/openstack-form5/AgirMinDev99-22Mars/PIC/outils_light/devops63/ansible/tenant_outils/inventories/dev/01-localhost.yml inventory source with ini plugin
+setting up inventory plugins
+host_list declined parsing /home/ops63-florentin01/sources/openstack-form5/AgirMinDev99-22Mars/PIC/outils_light/devops63/ansible/tenant_outils/inventories/dev/02-openstack.yml as it did not pass its verify_file() method
+script declined parsing /home/ops63-florentin01/sources/openstack-form5/AgirMinDev99-22Mars/PIC/outils_light/devops63/ansible/tenant_outils/inventories/dev/02-openstack.yml as it did not pass its verify_file() method
+redirecting (type: inventory) ansible.builtin.openstack to openstack.cloud.openstack
+Loading collection openstack.cloud from /home/ops63-florentin01/.ansible/collections/ansible_collections/openstack/cloud
+OpenStack inventory configuration file found: openstack.yml
+Retrieving servers from Openstack clouds
+Found 1 OpenStack cloud(s)
+Using 1 OpenStack cloud(s)
+Not replacing invalid character(s) "{'-'}" in group name (meta-platform_name_devops63_outils)
+Not replacing invalid character(s) "{'-'}" in group name (meta-group_grafana)
+Not replacing invalid character(s) "{'-'}" in group name (instance-1c45b3b6-154d-4018-9fc6-68cb8eeaa314)
+Not replacing invalid character(s) "{'-', '.'}" in group name (flavor-CO1.4)
+Not replacing invalid character(s) "{'-'}" in group name (image-None)
+Not replacing invalid character(s) "{'-'}" in group name (meta-group_bastion)
+Not replacing invalid character(s) "{'-'}" in group name (instance-cceae5f1-15ea-470c-a5af-9aca2e67061f)
+Not replacing invalid character(s) "{'-', '.'}" in group name (flavor-CO1.1)
+Parsed /home/ops63-florentin01/sources/openstack-form5/AgirMinDev99-22Mars/PIC/outils_light/devops63/ansible/tenant_outils/inventories/dev/02-openstack.yml inventory source with auto plugin
+setting up inventory plugins
+host_list declined parsing /home/ops63-florentin01/sources/openstack-form5/AgirMinDev99-22Mars/PIC/outils_light/devops63/ansible/tenant_outils/inventories/dev/03-plateform.yml as it did not pass its verify_file() method
+script declined parsing /home/ops63-florentin01/sources/openstack-form5/AgirMinDev99-22Mars/PIC/outils_light/devops63/ansible/tenant_outils/inventories/dev/03-plateform.yml as it did not pass its verify_file() method
+Parsed /home/ops63-florentin01/sources/openstack-form5/AgirMinDev99-22Mars/PIC/outils_light/devops63/ansible/tenant_outils/inventories/dev/03-plateform.yml inventory source with auto plugin
+Loading callback plugin default of type stdout, v2.0 from /home/ops63-florentin01/ansible_2.10/lib/python3.6/site-packages/ansible/plugins/callback/default.py
+Skipping callback 'default', as we already have a stdout callback.
+Skipping callback 'minimal', as we already have a stdout callback.
+Skipping callback 'oneline', as we already have a stdout callback.
+
+PLAYBOOK: 00_Conf_etc_hosts.yml ************************************************
+Positional arguments: /home/ops63-florentin01/sources/openstack-form5/AgirMinDev99-22Mars/PIC/outils_light/devops63/ansible/tenant_outils/00_Conf_etc_hosts.yml
+verbosity: 4
+connection: smart
+timeout: 10
+become_method: sudo
+tags: ('all',)
+inventory: ('/home/ops63-florentin01/sources/openstack-form5/AgirMinDev99-22Mars/PIC/outils_light/devops63/ansible/tenant_outils/inventories/dev',)
+forks: 5
+1 plays in /home/ops63-florentin01/sources/openstack-form5/AgirMinDev99-22Mars/PIC/outils_light/devops63/ansible/tenant_outils/00_Conf_etc_hosts.yml
+
+PLAY [platform] ****************************************************************
+skipping: no hosts matched
+
+PLAY RECAP *********************************************************************
+
